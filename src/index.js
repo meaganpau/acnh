@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Global, css } from '@emotion/core'
+import GlobalStyles from './styles/global.css'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Global 
+      styles={css`${GlobalStyles}`}
+    />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

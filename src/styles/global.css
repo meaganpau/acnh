@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    background-image: url('/assets/dots.png');
+    background-color: #f8eebc;
+    background-size: 32px 32px;
+    padding: 50px;
+}
