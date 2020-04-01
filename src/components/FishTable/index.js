@@ -9,6 +9,7 @@ import months from '../../util/months'
 import timeSlots from '../../util/timeSlots'
 import monthOptions from '../../util/monthOptions'
 import { event } from '../../util/gtag'
+import useDebounce from '../../util/debounce'
 
 const Container = styled.div`
     background: #fff;
@@ -162,6 +163,18 @@ const FishTable = ({ fish, hemisphere }) => {
     useEffect(() => {
         handleReset()
     }, [hemisphere])
+
+    const debouncedSearchTerm = useDebounce(inputVal, 1000)
+
+    useEffect(() => {
+        if (debouncedSearchTerm) {
+            event({
+                action: 'Search',
+                category: 'Filter',
+                label: debouncedSearchTerm
+            })
+        }
+    },[debouncedSearchTerm]);
 
     const handleReset = () => {
         nameFilter('')
