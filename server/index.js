@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const db = mongoose.connection;
 const PORT = process.env.PORT;
 const MONGOOSE_URI = process.env.MONGODB_URI;
@@ -13,6 +14,10 @@ const app = express();
 const routes = require('./routes/')
 
 db.on('error', console.error.bind(console, 'connection error:'));
+
+app.use('/', express.static(
+  path.join(__dirname, '../build')
+))
 
 app.use('/api', routes);
 
