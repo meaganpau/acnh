@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "server": "nodemon server/index.js --ignore src/",
     "seed": "node server/seeds/index.js",
-    "heroku-postbuild": "cd src && yarn install && yarn run build"
+    "heroku-postbuild": "yarn install && yarn run build"
   },
   "proxy": "http://localhost:8000",
   "eslintConfig": {
