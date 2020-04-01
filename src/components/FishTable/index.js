@@ -3,11 +3,13 @@ import styled from '@emotion/styled'
 import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
-import SearchBar from './SearchBar'
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import debounce from 'lodash/debounce';
+import SearchBar from './SearchBar'
 import months from '../../util/months'
 import timeSlots from '../../util/timeSlots'
 import monthOptions from '../../util/monthOptions'
+import { event } from '../../util/gtag'
 
 const Container = styled.div`
     background: #fff;
@@ -170,20 +172,40 @@ const FishTable = ({ fish, hemisphere }) => {
         setTimeFilter('')
         setMonthFilter('')
     };
+    
+    const searchEvent = () => {
+        console.log(1);
+        event({
+            action: 'Search',
+            category: 'Filter',
+            label: inputVal
+        })
+    }
 
     const handleSearch = val => {
         nameFilter(val)
         setInputVal(val)
+        return debounce(searchEvent, 500)
     }
 
     const handleTimeChange = val => {
         timeFilter(val)
         setTimeFilter(val)
+        event({
+            action: 'Time',
+            category: 'Filter',
+            label: timeSlots[val].label
+        })
     }
 
     const handleMonthChange = val => {
         monthFilter(val)
         setMonthFilter(val)
+        event({
+            action: 'Month',
+            category: 'Filter',
+            label: val
+        })
     }
 
     const handleNow = () => {
@@ -193,6 +215,19 @@ const FishTable = ({ fish, hemisphere }) => {
         handleSearch('')
         handleTimeChange(hour)
         handleMonthChange(month)
+        event({
+            action: 'Available Now',
+            category: 'Button click',
+            label: currentTime,
+        })
+    }
+
+    const handleClearAllFilters = () => {
+        handleReset()
+        event({
+            action: 'Clear all filters',
+            category: 'Button click',
+        })
     }
  
     const columns = [{
@@ -338,7 +373,7 @@ const FishTable = ({ fish, hemisphere }) => {
                     </Filters>
                     <Buttons>
                         <button className="btn btn-md" onClick={ handleNow }>Available Now</button>
-                        <button className="btn btn-md" onClick={ handleReset }>Clear all filters</button>
+                        <button className="btn btn-md" onClick={ handleClearAllFilters }>Clear all filters</button>
                     </Buttons>
                     <TableContainer>
                         <BootstrapTable 
