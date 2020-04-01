@@ -71,7 +71,7 @@ const TableContainer = styled.div`
     margin-top: 30px;
 
     @media screen and (max-width: 990px) {
-        box-shadow: inset -12px 0 10px -5px rgba(0,0,0,.08);
+        box-shadow: inset -12px 0 10px -5px rgba(0,0,0,.085);
         border-top-right-radius: 2px;
     }
 `

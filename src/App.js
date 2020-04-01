@@ -34,6 +34,10 @@ const Link = styled.a`
   float: left;
   font-size: 10px;
   color: #777;
+
+  @media screen and (max-width: 990px) {
+    float: none;
+  }
 `
 
 const App = () => {
