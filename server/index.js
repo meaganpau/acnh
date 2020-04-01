@@ -22,6 +22,12 @@ app.use('/', express.static(
 
 app.use('/api', routes);
 
+app.get('*', (req, res) => {
+  res.sendFile(
+      path.join(__dirname, '../build/index.html')
+  )
+})
+
 app.listen(PORT, async () => {
     console.log(`Listening on port ${PORT}`);
     await mongoose
