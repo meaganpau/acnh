@@ -4,7 +4,6 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import debounce from 'lodash/debounce';
 import SearchBar from './SearchBar'
 import months from '../../util/months'
 import timeSlots from '../../util/timeSlots'
@@ -172,20 +171,10 @@ const FishTable = ({ fish, hemisphere }) => {
         setTimeFilter('')
         setMonthFilter('')
     };
-    
-    const searchEvent = () => {
-        console.log(1);
-        event({
-            action: 'Search',
-            category: 'Filter',
-            label: inputVal
-        })
-    }
 
     const handleSearch = val => {
         nameFilter(val)
         setInputVal(val)
-        return debounce(searchEvent, 500)
     }
 
     const handleTimeChange = val => {
