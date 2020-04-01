@@ -13,10 +13,16 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 50px;
+
+  @media screen and (max-width: 990px) {
+    padding: 20px;
+  }
 `
 
 const Tabs = styled.ul`
-  max-width: 1180px;
+  max-width: calc(100% - 20px);
+  flex-wrap: nowrap;
 
   .nav-item {
     background: #ececec;

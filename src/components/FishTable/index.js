@@ -18,11 +18,10 @@ const Container = styled.div`
     border-top: none;
 
     table {
-        background: #fff;
         table-layout: auto;
         border: none;
-        margin-top: 30px;
         text-align: left;
+        margin-bottom: 0;
 
         .caret-4-desc,
         .caret-4-asc,
@@ -65,6 +64,18 @@ const Container = styled.div`
     }
 `
 
+const TableContainer = styled.div`
+    overflow: auto;
+    position: relative;
+    border-bottom-right-radius: 20px;
+    margin-top: 30px;
+
+    @media screen and (max-width: 990px) {
+        box-shadow: inset -12px 0 10px -5px rgba(0,0,0,.08);
+        border-top-right-radius: 2px;
+    }
+`
+
 const Filters = styled.div`
     display: flex;
     padding-left: 30px;
@@ -77,6 +88,16 @@ const Filters = styled.div`
 
     input {
         width: 100%;
+    }
+
+    @media screen and (max-width: 990px) {
+        flex-direction: column;
+
+        select {
+            margin-top: 10px;
+            max-width: none;
+            margin-left: 0;
+        }
     }
 `
 
@@ -319,11 +340,14 @@ const FishTable = ({ fish, hemisphere }) => {
                         <button className="btn btn-md" onClick={ handleNow }>Available Now</button>
                         <button className="btn btn-md" onClick={ handleReset }>Clear all filters</button>
                     </Buttons>
-                    <BootstrapTable 
-                        { ...props.baseProps }
-                        defaultSorted={ defaultSorted }
-                        filter={ filterFactory() }
-                    />   
+                    <TableContainer>
+                        <BootstrapTable 
+                            { ...props.baseProps }
+                            defaultSorted={ defaultSorted }
+                            filter={ filterFactory() }
+                            noDataIndication="No fish found :("
+                        />   
+                    </TableContainer>
                 </Container>
             )}
         </ToolkitProvider>

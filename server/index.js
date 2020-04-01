@@ -6,11 +6,6 @@ const db = mongoose.connection;
 const PORT = process.env.PORT;
 const MONGOOSE_URI = process.env.MONGODB_URI;
 
-
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true)
-mongoose.set('useCreateIndex', true);
-
 const app = express();
 const routes = require('./routes/')
 
@@ -31,7 +26,11 @@ app.get('*', (req, res) => {
 app.listen(PORT, async () => {
     console.log(`Listening on port ${PORT}`);
     await mongoose
-        .connect(MONGOOSE_URI)
+        .connect(MONGOOSE_URI, {
+          useUnifiedTopology: true, 
+          useNewUrlParser: true,
+          useCreateIndex: true
+        })
         .then(() => {
           console.log(`Successfully connected to ${MONGOOSE_URI}`);
         })
