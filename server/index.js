@@ -6,6 +6,7 @@ const db = mongoose.connection;
 const PORT = process.env.PORT;
 const MONGOOSE_URI = process.env.MONGODB_URI;
 
+
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true)
 mongoose.set('useCreateIndex', true);
@@ -18,6 +19,12 @@ db.on('error', console.error.bind(console, 'connection error:'));
 app.use('/', express.static(
   path.join(__dirname, '../build')
 ))
+
+app.get('*', (req, res) => {
+  res.sendFile(
+      path.join(__dirname, '../build/index.html')
+  )
+})
 
 app.use('/api', routes);
 
