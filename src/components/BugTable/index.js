@@ -145,9 +145,9 @@ let timeFilter
 const filterTime = (filterVal, data) => {
     if (filterVal) {
         const validTimes = timeSlots[filterVal].timeSlots;
-        return data.filter((item) => {
-            if (item.time.includes('All day')) { return true; }
-            const hasMatchingTimes = item.time.some(time => validTimes.includes(time))
+        return data.filter((bug) => {
+            if (bug.time.includes('All day')) { return true; }
+            const hasMatchingTimes = bug.time.some(time => validTimes.includes(time))
             return hasMatchingTimes;
         })
     }
@@ -155,7 +155,7 @@ const filterTime = (filterVal, data) => {
     return data;
 }
 
-const FishTable = ({ data, hemisphere }) => {
+const BugTable = ({ data, hemisphere }) => {
     const [inputVal, setInputVal] = useState('')
     const [month, setMonthFilter] = useState('')
     const [time, setTimeFilter] = useState('')
@@ -197,7 +197,7 @@ const FishTable = ({ data, hemisphere }) => {
             event({
                 action: 'Time',
                 category: 'Filter',
-                label: timeSlots[val] && timeSlots[val].label
+                label: timeSlots[val].label
             })
         }
     }
@@ -256,23 +256,8 @@ const FishTable = ({ data, hemisphere }) => {
         sort: true
     },
     {
-        dataField: 'specific_location',
-        text: 'Specific Location',
-        hidden: true
-    },
-    {
         dataField: 'weather',
         text: 'Weather',
-        hidden: true
-    },
-    {
-        dataField: 'shadow',
-        text: 'Shadow Size',
-        sort: true
-    },
-    {
-        dataField: 'fin',
-        text: 'Fin Showing',
         hidden: true
     },
     {
@@ -350,7 +335,7 @@ const FishTable = ({ data, hemisphere }) => {
         >
             { props => (
                 <Container>
-                    <Title>Fish List <span role="img" aria-label="">🐟</span></Title>
+                    <Title>Bug List <span role="img" aria-label="">🐛</span></Title>
                     <Filters>
                         <SearchBar 
                             onSearch={handleSearch}
@@ -384,7 +369,7 @@ const FishTable = ({ data, hemisphere }) => {
                             { ...props.baseProps }
                             defaultSorted={ defaultSorted }
                             filter={ filterFactory() }
-                            noDataIndication="No fish found :("
+                            noDataIndication="No bugs found :("
                         />   
                     </TableContainer>
                 </Container>
@@ -393,4 +378,4 @@ const FishTable = ({ data, hemisphere }) => {
     )
 }
 
-export default FishTable
+export default BugTable

@@ -1,6 +1,6 @@
 const monthOptions = [
     { value: '', label: 'No month filter' },
-    { value: 'January,February,March,April,May,June,July,August,September,October,November,December', label: 'All Year' },
+    { value: 'January,February,March,April,May,June,July,August,September,October,November,December', label: 'All Year (Only)' },
     { value: 'January', label: 'January' },
     { value: 'February', label: 'February' },
     { value: 'March', label: 'March' },

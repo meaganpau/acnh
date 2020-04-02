@@ -3,7 +3,9 @@ import styled from '@emotion/styled'
 import { ThemeProvider } from 'emotion-theming'
 import theme from './styles/theme'
 import FishTable from './components/FishTable'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import BugTable from './components/BugTable'
+import Content from './components/Content'
+import Tabs from './components/common/Tabs'
 
 const Title = styled.h1`
   font-family: ${props => props.theme.fonts.title};
@@ -20,15 +22,6 @@ const Container = styled.div`
   }
 `
 
-const Tabs = styled.ul`
-  max-width: calc(100% - 20px);
-  flex-wrap: nowrap;
-
-  .nav-item {
-    background: #ececec;
-  }
-`
-
 const Link = styled.a`
   margin-top: 20px;
   float: left;
@@ -40,9 +33,17 @@ const Link = styled.a`
   }
 `
 
+const SubTitle = styled.h2`
+  font-size: 24px;
+  margin-bottom: 30px;
+`
+
 const App = () => {
   const [fish, setFish] = useState([])
+  const [bugs, setBugs] = useState([])
   const [hemisphere, setHemisphere] = useState('north')
+  const [critter, setCritter] = useState('fish')
+  
   useEffect(() => {
     fetch('/api/fish')
       .then(res => {
@@ -58,35 +59,53 @@ const App = () => {
       .catch(err => {
         console.log(err);
       })
+
+    fetch('/api/bugs')
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          throw new Error('Something went wrong...')
+        }
+      })
+      .then(data => {
+        setBugs(data)
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }, [])
 
   const handleHemisphereChange = (e, hemisphere) => {
     e.preventDefault();
-    document.querySelectorAll('.nav-link.active').forEach(item => {
-      item.classList.remove('active')
-    });
-    e.target.classList.add('active');
     setHemisphere(hemisphere)
+  }
+  
+  const handleCritterChange = (e, critter) => {
+    e.preventDefault()
+    setCritter(critter)
   }
 
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Title>ACNH Critter List</Title>
-        <h2>Fish List</h2>
-        <Tabs className="nav nav-tabs" role="tablist">
+        <Title>Critterdex</Title>
+        <SubTitle>Critters from Animal Crossing: New Horizons</SubTitle>
+        <Tabs className="nav nav-tabs hemisphere-tabs" role="tablist">
           <li className="nav-item">
-            <a className="nav-link active" href="# " onClick={(e) => handleHemisphereChange(e, 'north')}>Northern Hemisphere</a>
+            <a className={`nav-link ${hemisphere === 'north' ? 'active' : ''}`} href="# " onClick={(e) => handleHemisphereChange(e, 'north')}>Northern Hemisphere</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="# " onClick={(e) => handleHemisphereChange(e, 'south')}>Southern Hemisphere</a>
+            <a className={`nav-link ${hemisphere === 'south' ? 'active' : ''}`} href="# " onClick={(e) => handleHemisphereChange(e, 'south')}>Southern Hemisphere</a>
           </li>
         </Tabs>
-        {
-          hemisphere === 'north' ?
-          <FishTable fish={fish} hemisphere='north'/>
-          :<FishTable fish={fish} hemisphere='south'/>
-        }
+        <Content 
+          critter={critter} 
+          handleCritterChange={handleCritterChange} 
+          hemisphere={hemisphere}
+          fish={fish}
+          bugs={bugs}
+        />
         <Link
           className="App-link"
           href="https://meaganpau.com"
