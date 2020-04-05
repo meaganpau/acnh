@@ -68,7 +68,7 @@ no,name,location,weather,value,time,north_months,south_months,north_month_label,
 14,Atlas Moth,Trees,,3000,7 p.m. - 4 a.m.,"April, May, June, July, August, September","October, November, December, January, February, March",April-September,October-March
 13,Moth,Flying (near light),,130,7 p.m. - 4 a.m.,All,All,All,All
 12,Queen Alexandra's Birdwing,Flying,,4000,8 a.m. - 4 p.m.,"May, June, July, August, September","November, December, January, February, March",May-September,November-March
-11,Raja Brooke's Birdwing,Flying (near purple flowers),,2500,8 a.m. - 5 p.m.,"April, May, June, July, August, September, December, January, February","November, December, January, February, March, June, July, August","April-September, December-February","November-March, June-August"
+11,Rajah Brooke's Birdwing,Flying (near purple flowers),,2500,8 a.m. - 5 p.m.,"April, May, June, July, August, September, December, January, February","November, December, January, February, March, June, July, August","April-September, December-February","November-March, June-August"
 10,Agrias Butterfly,Flying,,3000,8 a.m. - 5 p.m.,"April, May, June, July, August, September","November, December, January, February, March",April-September,November-March
 9,Emperor Butterfly,Flying,,4000,5 p.m. - 8 a.m.,"June, July, August, September, December, January, February, March","November, December, January, February, March, June, July, August, September","June-September, December-March","December-March, June-September"
 8,Monach Butterfly,Flying,,140,4 a.m. - 5 p.m.,"September, October, November","March, April, May",September-November,March-May
