@@ -12,7 +12,8 @@
     "north_months": ["November", "December", "January", "February", "March"],
     "south_months": ["May", "June", "July", "August", "September"],
     "north_month_label": "November-March",
-    "south_month_label": "May-September"
+    "south_month_label": "May-September",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/ea/NH-Icon-bitterling.png"
   },
   {
     "no": 2,
@@ -27,7 +28,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2c/NH-Icon-palechub.png"
   },
   {
     "no": 3,
@@ -42,7 +44,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/0/03/NH-Icon-cruciancarp.png"
   },
   {
     "no": 4,
@@ -57,7 +60,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/22/NH-Icon-dace.png"
   },
   {
     "no": 5,
@@ -72,7 +76,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2c/NH-Icon-carp.png"
   },
   {
     "no": 6,
@@ -87,7 +92,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/74/NH-Icon-koi.png"
   },
   {
     "no": 7,
@@ -102,7 +108,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/ed/NH-Icon-goldfish.png"
   },
   {
     "no": 8,
@@ -117,7 +124,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c9/NH-Icon-popeyedgoldfish.png"
   },
   {
     "no": 9,
@@ -132,7 +140,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/f/f9/NH-Icon-ranchugoldfish.png"
   },
   {
     "no": 10,
@@ -147,7 +156,8 @@
     "north_months": ["April", "May", "June", "July", "August"],
     "south_months": ["October", "November", "December", "January", "February"],
     "north_month_label": "April-August",
-    "south_month_label": "October-February"
+    "south_month_label": "October-February",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c3/NH-Icon-killifish.png"
   },
   {
     "no": 11,
@@ -162,7 +172,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September"],
     "south_months": ["October", "November", "December", "January", "February", "March"],
     "north_month_label": "April-September",
-    "south_month_label": "October-March"
+    "south_month_label": "October-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/cd/NH-Icon-crawfish.png"
   },
   {
     "no": 12,
@@ -177,7 +188,8 @@
     "north_months": ["August", "September"],
     "south_months": ["February", "March"],
     "north_month_label": "August-September",
-    "south_month_label": "February-March"
+    "south_month_label": "February-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c3/NH-Icon-softshelledturtle.png"
   },
   {
     "no": 13,
@@ -192,7 +204,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September", "October"],
     "south_months": ["October", "November", "December", "January", "February", "March", "April"],
     "north_month_label": "April-October",
-    "south_month_label": "October-April"
+    "south_month_label": "October-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/24/NH-Icon-snappingturtle.png"
   },
   {
     "no": 14,
@@ -207,7 +220,8 @@
     "north_months": ["March", "April", "May", "June", "July"],
     "south_months": ["September", "October", "November", "December", "January"],
     "north_month_label": "March-July",
-    "south_month_label": "September-January"
+    "south_month_label": "September-January",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Icon-tadpole.png"
   },
   {
     "no": 15,
@@ -222,7 +236,8 @@
     "north_months": ["May", "June", "July", "August"],
     "south_months": ["November", "December", "January", "February"],
     "north_month_label": "May-August",
-    "south_month_label": "November-Feburary"
+    "south_month_label": "November-Feburary",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/6/6b/NH-Icon-frog.png"
   },
   {
     "no": 16,
@@ -237,7 +252,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/ee/NH-Icon-freshwatergoby.png"
   },
   {
     "no": 17,
@@ -252,7 +268,8 @@
     "north_months": ["March", "April", "May"],
     "south_months": ["September", "October", "November"],
     "north_month_label": "March-May",
-    "south_month_label": "September-November"
+    "south_month_label": "September-November",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/77/NH-Icon-loach.png"
   },
   {
     "no": 18,
@@ -267,7 +284,8 @@
     "north_months": ["May", "June", "July", "August", "September", "October"],
     "south_months": ["November", "December", "January", "February", "March", "April"],
     "north_month_label": "May-October",
-    "south_month_label": "November-April"
+    "south_month_label": "November-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/29/NH-Icon-catfish.png"
   },
   {
     "no": 19,
@@ -282,7 +300,8 @@
     "north_months": ["June", "July", "August"],
     "south_months": ["December", "January", "February"],
     "north_month_label": "June-August",
-    "south_month_label": "December-February"
+    "south_month_label": "December-February",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/0/0c/NH-Icon-giantsnakehead.png"
   },
   {
     "no": 20,
@@ -297,7 +316,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/6/69/NH-Icon-bluegill.png"
   },
   {
     "no": 21,
@@ -312,7 +332,8 @@
     "north_months": ["October", "November", "December", "January", "February", "March"],
     "south_months": ["April", "May", "June", "July", "August", "September"],
     "north_month_label": "October-March",
-    "south_month_label": "April-September"
+    "south_month_label": "April-September",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1d/NH-Icon-yellowperch.png"
   },
   {
     "no": 22,
@@ -327,7 +348,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e2/NH-Icon-blackbass.png"
   },
   {
     "no": 23,
@@ -342,7 +364,8 @@
     "north_months": ["June", "July", "August", "September", "October"],
     "south_months": ["December", "January", "February", "March", "April"],
     "north_month_label": "June-October",
-    "south_month_label": "December-April"
+    "south_month_label": "December-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/53/NH-Icon-tilapia.png"
   },
   {
     "no": 24,
@@ -357,7 +380,8 @@
     "north_months": ["September", "October", "November", "December"],
     "south_months": ["March", "April", "May", "June"],
     "north_month_label": "September-December",
-    "south_month_label": "March-June"
+    "south_month_label": "March-June",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/d/dc/NH-Icon-pike.png"
   },
   {
     "no": 25,
@@ -372,7 +396,8 @@
     "north_months": ["December", "January", "February"],
     "south_months": ["June", "July", "August"],
     "north_month_label": "December-February",
-    "south_month_label": "June-August"
+    "south_month_label": "June-August",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/4/41/NH-Icon-pondsmelt.png"
   },
   {
     "no": 26,
@@ -387,7 +412,8 @@
     "north_months": ["July", "August", "September"],
     "south_months": ["January", "February", "March"],
     "north_month_label": "July-September",
-    "south_month_label": "January-March"
+    "south_month_label": "January-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/4/40/NH-Icon-sweetfish.png"
   },
   {
     "no": 27,
@@ -402,7 +428,8 @@
     "north_months": ["March", "April", "May", "June", "September", "October", "November"],
     "south_months": ["March", "April", "May", "September", "October", "November", "December"],
     "north_month_label": "March-June, September-November",
-    "south_month_label": "March-May, September-December"
+    "south_month_label": "March-May, September-December",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5f/NH-Icon-cherrysalmon.png"
   },
   {
     "no": 28,
@@ -417,7 +444,8 @@
     "north_months": ["March", "April", "May", "June", "September", "October", "November"],
     "south_months": ["March", "April", "May", "September", "October", "November", "December"],
     "north_month_label": "March-June, September-November",
-    "south_month_label": "March-May, September-December"
+    "south_month_label": "March-May, September-December",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/15/NH-Icon-char.png"
   },
   {
     "no": 29,
@@ -432,7 +460,8 @@
     "north_months": ["March", "April", "May", "June", "September", "October", "November"],
     "south_months": ["March", "April", "May", "September", "October", "November", "December"],
     "north_month_label": "March-June, September-November",
-    "south_month_label": "March-May, September-December"
+    "south_month_label": "March-May, September-December",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5c/NH-Icon-goldentrout.png"
   },
   {
     "no": 30,
@@ -447,7 +476,8 @@
     "north_months": ["December", "January", "February", "March"],
     "south_months": ["June", "July", "August", "September"],
     "north_month_label": "December-March",
-    "south_month_label": "June-September"
+    "south_month_label": "June-September",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7b/NH-Icon-stringfish.png"
   },
   {
     "no": 31,
@@ -462,7 +492,8 @@
     "north_months": ["September"],
     "south_months": ["March"],
     "north_month_label": "September",
-    "south_month_label": "March"
+    "south_month_label": "March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/f/fb/NH-Icon-salmon.png"
   },
   {
     "no": 32,
@@ -477,7 +508,8 @@
     "north_months": ["September"],
     "south_months": ["March"],
     "north_month_label": "September",
-    "south_month_label": "March"
+    "south_month_label": "March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/f/fd/NH-Icon-kingsalmon.png"
   },
   {
     "no": 33,
@@ -492,7 +524,8 @@
     "north_months": ["September", "October", "November"],
     "south_months": ["March", "April", "May"],
     "north_month_label": "September-November",
-    "south_month_label": "March-May"
+    "south_month_label": "March-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e3/NH-Icon-mittencrab.png"
   },
   {
     "no": 34,
@@ -507,7 +540,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["October", "November", "December", "January", "February", "March", "April", "May"],
     "north_month_label": "April-November",
-    "south_month_label": "October-May"
+    "south_month_label": "October-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/6/63/NH-Icon-guppy.png"
   },
   {
     "no": 35,
@@ -522,7 +556,8 @@
     "north_months": ["May", "June", "July", "August", "September"],
     "south_months": ["November", "December", "January", "February", "March"],
     "north_month_label": "May-September",
-    "south_month_label": "November-March"
+    "south_month_label": "November-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/8/89/NH-Icon-nibblefish.png"
   },
   {
     "no": 36,
@@ -537,7 +572,8 @@
     "north_months": ["May", "June", "July", "August", "September", "October"],
     "south_months": ["November", "December", "January", "February", "March", "April"],
     "north_month_label": "May-October",
-    "south_month_label": "November-April"
+    "south_month_label": "November-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/6/63/NH-Icon-angelfish.png"
   },
   {
     "no": 37,
@@ -552,7 +588,8 @@
     "north_months": ["May", "June", "July", "August", "September", "October"],
     "south_months": ["November", "December", "January", "February", "March", "April"],
     "north_month_label": "May-October",
-    "south_month_label": "November-April"
+    "south_month_label": "November-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7c/NH-Icon-betta.png"
   },
   {
     "no": 38,
@@ -567,7 +604,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["October", "November", "December", "January", "February", "March", "April", "May"],
     "north_month_label": "April-November",
-    "south_month_label": "October-May"
+    "south_month_label": "October-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/d/da/NH-Icon-neontetra.png"
   },
   {
     "no": 39,
@@ -582,7 +620,8 @@
     "north_months": ["May", "June", "July", "August", "September", "October"],
     "south_months": ["November", "December", "January", "February", "March", "April"],
     "north_month_label": "May-October",
-    "south_month_label": "November-April"
+    "south_month_label": "November-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/6/68/NH-Icon-rainbowfish.png"
   },
   {
     "no": 40,
@@ -597,7 +636,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/b/b9/NH-Icon-piranha.png"
   },
   {
     "no": 41,
@@ -612,7 +652,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/b/bf/NH-Icon-arowana.png"
   },
   {
     "no": 42,
@@ -627,7 +668,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/d/df/NH-Icon-dorado.png"
   },
   {
     "no": 43,
@@ -642,7 +684,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/9/9f/NH-Icon-gar.png"
   },
   {
     "no": 44,
@@ -657,7 +700,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7f/NH-Icon-arapaima.png"
   },
   {
     "no": 45,
@@ -672,7 +716,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a0/NH-Icon-saddledbichir.png"
   },
   {
     "no": 46,
@@ -687,7 +732,8 @@
     "north_months": ["September", "October", "November", "December", "January", "February", "March"],
     "south_months": ["March", "April", "May", "June", "July", "August", "September"],
     "north_month_label": "September-March",
-    "south_month_label": "March-September"
+    "south_month_label": "March-September",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/9/98/NH-Icon-sturgeon.png"
   },
   {
     "no": 47,
@@ -702,7 +748,8 @@
     "north_months": ["December", "January", "February", "March"],
     "south_months": ["June", "July", "August", "September"],
     "north_month_label": "December-March",
-    "south_month_label": "June-September"
+    "south_month_label": "June-September",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/8/8f/NH-Icon-seabutterfly.png"
   },
   {
     "no": 48,
@@ -717,7 +764,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["October", "November", "December", "January", "February", "March", "April", "May"],
     "north_month_label": "April-November",
-    "south_month_label": "October-May"
+    "south_month_label": "October-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/55/NH-Icon-seahorse.png"
   },
   {
     "no": 49,
@@ -732,7 +780,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September"],
     "south_months": ["October", "November", "December", "January", "February", "March"],
     "north_month_label": "April-September",
-    "south_month_label": "October-March"
+    "south_month_label": "October-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2f/NH-Icon-clownfish.png"
   },
   {
     "no": 50,
@@ -747,7 +796,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September"],
     "south_months": ["October", "November", "December", "January", "February", "March"],
     "north_month_label": "April-September",
-    "south_month_label": "October-March"
+    "south_month_label": "October-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/11/NH-Icon-surgeonfish.png"
   },
   {
     "no": 51,
@@ -762,7 +812,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September"],
     "south_months": ["October", "November", "December", "January", "February", "March"],
     "north_month_label": "April-September",
-    "south_month_label": "October-March"
+    "south_month_label": "October-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/8/8e/NH-Icon-butterflyfish.png"
   },
   {
     "no": 52,
@@ -777,7 +828,8 @@
     "north_months": ["July", "August", "September"],
     "south_months": ["January", "February"],
     "north_month_label": "July-August",
-    "south_month_label": "January-February"
+    "south_month_label": "January-February",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/6/6f/NH-Icon-napoleonfish.png"
   },
   {
     "no": 53,
@@ -792,7 +844,8 @@
     "north_months": ["April", "May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["October", "November", "December", "January", "February", "March", "April", "May"],
     "north_month_label": "April-November",
-    "south_month_label": "October-May"
+    "south_month_label": "October-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Icon-zebraturkeyfish.png"
   },
   {
     "no": 54,
@@ -807,7 +860,8 @@
     "north_months": ["November", "December", "January", "February"],
     "south_months": ["May", "June", "July", "August"],
     "north_month_label": "November-February",
-    "south_month_label": "May-August"
+    "south_month_label": "May-August",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/3/39/NH-Icon-blowfish.png"
   },
   {
     "no": 55,
@@ -822,7 +876,8 @@
     "north_months": ["July", "August", "September"],
     "south_months": ["January", "February", "March"],
     "north_month_label": "July-September",
-    "south_month_label": "January-March"
+    "south_month_label": "January-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1f/NH-Icon-pufferfish.png"
   },
   {
     "no": 56,
@@ -837,7 +892,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/24/NH-Icon-anchovy.png"
   },
   {
     "no": 57,
@@ -852,7 +908,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d5/NH-Icon-horsemackerel.png"
   },
   {
     "no": 58,
@@ -867,7 +924,8 @@
     "north_months": ["March", "April", "May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["September", "October", "November", "December", "January", "February", "March", "April", "May"],
     "north_month_label": "March-November",
-    "south_month_label": "September-May"
+    "south_month_label": "September-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/8/8c/NH-Icon-barredknifejaw.png"
   },
   {
     "no": 59,
@@ -882,7 +940,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/22/NH-Icon-seabass.png"
   },
   {
     "no": 60,
@@ -897,7 +956,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/d/dd/NH-Icon-redsnapper.png"
   },
   {
     "no": 61,
@@ -912,7 +972,8 @@
     "north_months": ["October", "November", "December", "January", "February", "March", "April"],
     "south_months": ["April", "May", "June", "July", "August", "September", "October"],
     "north_month_label": "October-April",
-    "south_month_label": "April-October"
+    "south_month_label": "April-October",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c6/NH-Icon-dab.png"
   },
   {
     "no": 62,
@@ -927,7 +988,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/9/9e/NH-Icon-oliveflounder.png"
   },
   {
     "no": 63,
@@ -942,7 +1004,8 @@
     "north_months": ["December", "January", "February", "March", "April", "May", "June", "July", "August"],
     "south_months": ["June", "July", "August", "September", "October", "November", "December", "January", "February"],
     "north_month_label": "December-August",
-    "south_month_label": "June-February"
+    "south_month_label": "June-February",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/3/3b/NH-Icon-squid.png"
   },
   {
     "no": 64,
@@ -957,7 +1020,8 @@
     "north_months": ["August", "September", "October"],
     "south_months": ["February", "March", "April"],
     "north_month_label": "August-October",
-    "south_month_label": "February-April"
+    "south_month_label": "February-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e5/NH-Icon-morayeel.png"
   },
   {
     "no": 65,
@@ -972,7 +1036,8 @@
     "north_months": ["June", "July", "August", "September", "October"],
     "south_months": ["December", "January", "February", "March", "April"],
     "north_month_label": "June-October",
-    "south_month_label": "December-April"
+    "south_month_label": "December-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/a/ac/NH-Icon-ribboneel.png"
   },
   {
     "no": 66,
@@ -987,7 +1052,8 @@
     "north_months": ["November", "December", "January", "February", "March", "April"],
     "south_months": ["May", "June", "July", "August", "September", "October"],
     "north_month_label": "November-April",
-    "south_month_label": "May-October"
+    "south_month_label": "May-October",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/50/NH-Icon-tuna.png"
   },
   {
     "no": 67,
@@ -1002,7 +1068,8 @@
     "north_months": ["June", "July", "August", "September", "November", "December", "January", "February", "March", "April"],
     "south_months": ["January", "February", "March", "May", "June", "July", "August", "September", "October", "November"],
     "north_month_label": "July-September, November-April",
-    "south_month_label": "January-March, May-November"
+    "south_month_label": "January-March, May-November",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2f/NH-Icon-bluemarlin.png"
   },
   {
     "no": 68,
@@ -1017,7 +1084,8 @@
     "north_months": ["May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["November", "December", "January", "February", "March", "April"],
     "north_month_label": "May-October",
-    "south_month_label": "November-April"
+    "south_month_label": "November-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7b/NH-Icon-gianttrevally.png"
   },
   {
     "no": 69,
@@ -1032,7 +1100,8 @@
     "north_months": ["May", "June", "July", "August", "September", "October", "November"],
     "south_months": ["November", "December", "January", "February", "March", "April"],
     "north_month_label": "May-October",
-    "south_month_label": "November-April"
+    "south_month_label": "November-April",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/8/82/NH-Icon-mahimahi.png"
   },
   {
     "no": 70,
@@ -1047,7 +1116,8 @@
     "north_months": ["July", "August", "September"],
     "south_months": ["January", "February", "March"],
     "north_month_label": "July-September",
-    "south_month_label": "January-March"
+    "south_month_label": "January-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/52/NH-Icon-oceansunfish.png"
   },
   {
     "no": 71,
@@ -1062,7 +1132,8 @@
     "north_months": ["August", "September", "October", "November"],
     "south_months": ["February", "March", "April", "May"],
     "north_month_label": "August-November",
-    "south_month_label": "February-May"
+    "south_month_label": "February-May",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/d/db/NH-Icon-ray.png"
   },
   {
     "no": 72,
@@ -1077,7 +1148,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/7/73/NH-Icon-sawshark.png"
   },
   {
     "no": 73,
@@ -1092,7 +1164,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/2/25/NH-Icon-hammerheadshark.png"
   },
   {
     "no": 74,
@@ -1107,7 +1180,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/3/38/NH-Icon-greatwhiteshark.png"
   },
   {
     "no": 75,
@@ -1122,7 +1196,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Icon-whaleshark.png"
   },
   {
     "no": 76,
@@ -1137,7 +1212,8 @@
     "north_months": ["June", "July", "August", "September"],
     "south_months": ["December", "January", "February", "March"],
     "north_month_label": "June-September",
-    "south_month_label": "December-March"
+    "south_month_label": "December-March",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/b/b9/NH-Icon-suckerfish.png"
   },
   {
     "no": 77,
@@ -1152,7 +1228,8 @@
     "north_months": ["November", "December", "January", "February", "March"],
     "south_months": ["May", "June", "July", "August", "September"],
     "north_month_label": "November-March",
-    "south_month_label": "May-September"
+    "south_month_label": "May-September",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a5/NH-Icon-footballfish.png"
   },
   {
     "no": 78,
@@ -1167,7 +1244,8 @@
     "north_months": ["December", "January", "February", "March", "April", "May"],
     "south_months": ["June", "July", "August", "September", "October", "November"],
     "north_month_label": "December-May",
-    "south_month_label": "June-November"
+    "south_month_label": "June-November",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/3/33/NH-Icon-oarfish.png"
   },
   {
     "no": 79,
@@ -1182,7 +1260,8 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c7/NH-Icon-barreleye.png"
   },
   {
     "no": 80,
@@ -1197,6 +1276,7 @@
     "north_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "south_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "north_month_label": "All",
-    "south_month_label": "All"
+    "south_month_label": "All",
+    "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/3/31/NH-Icon-coelacanth.png"
   }
 ]

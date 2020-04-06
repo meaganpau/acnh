@@ -32,6 +32,9 @@ const bugSchema = new Schema({
     },
     south_month_label: {
         type: String
+    },
+    image: {
+        type: String
     }
 });
 

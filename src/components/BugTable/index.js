@@ -5,6 +5,7 @@ import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import SearchBar from '../common/SearchBar'
+import CritterImage from '../common/CritterImage'
 import months from '../../util/months'
 import timeSlots from '../../util/timeSlots'
 import monthOptions from '../../util/monthOptions'
@@ -138,6 +139,8 @@ const arrayFormatter = (cell, row) => {
     return cell.join(', ')
 }
 
+const imageFormatter = (cell, row) => <CritterImage src={cell} alt={row.name} />
+
 let nameFilter
 let monthFilter
 let timeFilter
@@ -239,6 +242,12 @@ const BugTable = ({ data, hemisphere }) => {
         text: 'Critter #',
         sort: true,
         hidden: true
+    },
+    {
+        dataField: 'image',
+        text: 'Image',
+        sort: false,
+        formatter: imageFormatter,
     },
     {
         dataField: 'name',

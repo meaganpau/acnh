@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled'
 import { ThemeProvider } from 'emotion-theming'
 import theme from './styles/theme'
-import FishTable from './components/FishTable'
-import BugTable from './components/BugTable'
 import Content from './components/Content'
 import Tabs from './components/common/Tabs'
 
