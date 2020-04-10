@@ -120,6 +120,8 @@ const App = () => {
     })
   }
 
+  const data = critter === 'bug' ? bugs : fish
+
   return (
     <ThemeProvider theme={theme}>
       <Container>
@@ -140,8 +142,7 @@ const App = () => {
           critter={critter} 
           handleCritterChange={handleCritterChange} 
           hemisphere={hemisphere}
-          fish={fish}
-          bugs={bugs}
+          data={data}
         />
         <Link
           className="App-link"

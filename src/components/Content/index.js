@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Tabs from '../common/Tabs'
-import FishTable from '../FishTable'
-import BugTable from '../BugTable'
+import CritterList from '../common/CritterList'
 
 const Container = styled.div`
     padding: 20px;
@@ -22,10 +21,10 @@ const Title = styled.h3`
     }
 `
 
-const Content = ({ handleCritterChange, hemisphere, critter, fish, bugs }) => {
+const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
     return (
         <Container>
-            <Title>{hemisphere === 'north' ? 'Northern' : 'Southern'} Hemisphere</Title>
+            <Title>{hemisphere}ern Hemisphere</Title>
             <Tabs>
                 <li className="nav-item">
                     <a className={`nav-link ${critter === 'fish' ? 'active' : ''}`} href="# " onClick={(e) => handleCritterChange(e, 'fish')}>Fish List</a>
@@ -34,10 +33,7 @@ const Content = ({ handleCritterChange, hemisphere, critter, fish, bugs }) => {
                     <a className={`nav-link ${critter === 'bug' ? 'active' : ''}`} href="# " onClick={(e) => handleCritterChange(e, 'bug')}>Bugs List</a>
                 </li>
             </Tabs>
-            { critter === 'fish' ?
-            <FishTable data={fish} hemisphere={hemisphere}/>
-            : <BugTable data={bugs} hemisphere={hemisphere}/> }
-            
+            <CritterList data={data} critter={critter} hemisphere={hemisphere} />
         </Container>
     )
 }
