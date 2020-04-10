@@ -71,11 +71,12 @@ const TableContainer = styled.div`
     overflow: auto;
     position: relative;
     border-bottom-right-radius: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 
     @media screen and (max-width: 990px) {
         box-shadow: inset -12px 0 10px -5px rgba(0,0,0,.085);
         border-top-right-radius: 2px;
+        margin-top: 30px;
     }
 `
 
@@ -83,6 +84,7 @@ const Filters = styled.div`
     display: flex;
     padding-left: 30px;
     padding-right: 30px;
+    margin-top: 20px;
 
     select {
         max-width: 300px;
@@ -106,27 +108,34 @@ const Filters = styled.div`
 
 const Buttons = styled.div`
     display: flex;
-    margin-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
+    justify-content: center;
+`
 
-    button {
-        background: ${props => props.theme.colors.green};
-        border: none;
+const AvailableNowButton = styled.button`
+    background: ${props => props.theme.colors.green};
+    background-image: url("/assets/icons/time.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px;
+    border: none;
+    color: #fff;
+
+    &:hover {
         color: #fff;
+        background-color: ${props => props.theme.colors.lightGreen};
+    }
 
+    & + button {
+        background-color: ${props => props.theme.colors.darkBlue};
+        margin-left: 10px;
+        color: #fff;
+        
         &:hover {
             color: #fff;
-            background: ${props => props.theme.colors.lightGreen};
-        }
-
-        & + button {
-            background: ${props => props.theme.colors.darkBlue};
-            margin-left: 10px;
-
-            &:hover {
-                background: ${props => props.theme.colors.blue};
-            }
+            background-color: ${props => props.theme.colors.blue};
         }
     }
 `
@@ -345,6 +354,10 @@ const BugTable = ({ data, hemisphere }) => {
             { props => (
                 <Container>
                     <Title>Bug List <span role="img" aria-label="">🐛</span></Title>
+                    <Buttons>
+                        <AvailableNowButton className="btn btn-md" onClick={ handleNow }>Available Now</AvailableNowButton>
+                        <button className="btn btn-md" onClick={ handleClearAllFilters }>Clear all filters</button>
+                    </Buttons>
                     <Filters>
                         <SearchBar 
                             onSearch={handleSearch}
@@ -369,10 +382,6 @@ const BugTable = ({ data, hemisphere }) => {
                             )}
                         </select>
                     </Filters>
-                    <Buttons>
-                        <button className="btn btn-md" onClick={ handleNow }>Available Now</button>
-                        <button className="btn btn-md" onClick={ handleClearAllFilters }>Clear all filters</button>
-                    </Buttons>
                     <TableContainer>
                         <BootstrapTable 
                             { ...props.baseProps }

@@ -4,9 +4,15 @@ import { ThemeProvider } from 'emotion-theming'
 import theme from './styles/theme'
 import Content from './components/Content'
 import Tabs from './components/common/Tabs'
+import { event } from './util/gtag'
 
 const Title = styled.h1`
   font-family: ${props => props.theme.fonts.title};
+  font-size: 56px;
+
+  @media screen and (max-width: 990px) {
+    font-size: 36px;
+  }
 `
 
 const Container = styled.div`
@@ -34,6 +40,26 @@ const Link = styled.a`
 const SubTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 30px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 20px;
+  width: 550px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 990px) {
+    font-size: 16px;
+  }
+`
+
+const Logo = styled.img`
+  max-width: 45px;
+  margin-right: 15px;
+
+  @media screen and (max-width: 990px) {
+    max-width: 30px;
+    margin-right: 10px;
+  }
 `
 
 const App = () => {
@@ -77,17 +103,30 @@ const App = () => {
   const handleHemisphereChange = (e, hemisphere) => {
     e.preventDefault();
     setHemisphere(hemisphere)
+    event({
+      action: 'Tab click',
+      category: 'Hemisphere',
+      label: hemisphere
+    })
   }
   
   const handleCritterChange = (e, critter) => {
     e.preventDefault()
     setCritter(critter)
+    event({
+      action: 'Tab click',
+      category: 'Critter',
+      label: critter
+    })
   }
 
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Title>Critterdex</Title>
+        <Title>
+          <Logo src="/logo192.png" alt="Critterdex Logo"/>
+          Critterdex
+        </Title>
         <SubTitle>Critters from Animal Crossing: New Horizons</SubTitle>
         <Tabs className="nav nav-tabs hemisphere-tabs" role="tablist">
           <li className="nav-item">
