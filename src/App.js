@@ -55,10 +55,12 @@ const SubTitle = styled.h2`
 const Logo = styled.img`
   max-width: 45px;
   margin-right: 15px;
+  margin-left: -60px;
 
   @media screen and (max-width: 990px) {
     max-width: 30px;
     margin-right: 10px;
+    margin-left: -40px;
   }
 `
 
