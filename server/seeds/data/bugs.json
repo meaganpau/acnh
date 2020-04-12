@@ -526,10 +526,10 @@
     "weather": "",
     "value": 120,
     "time": ["All day"],
-    "north_months": ["March", "April", "May", "June", "July", "August", "September", "October", "November"],
-    "south_months": ["September", "October", "November", "December", "January", "February", "March", "April", "May"],
-    "north_month_label": "March-November",
-    "south_month_label": "September-May",
+    "north_months": ["March", "April", "May", "June", "July", "August", "September", "October"],
+    "south_months": ["September", "October", "November", "December", "January", "February", "March", "April"],
+    "north_month_label": "March-October",
+    "south_month_label": "September-April",
     "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/8/80/NH-Icon-stinkbug.png"
   },
   {
@@ -539,10 +539,10 @@
     "weather": "",
     "value": 1000,
     "time": ["7pm - 8am"],
-    "north_months": ["March", "April", "May", "June", "July", "August", "September", "October", "November"],
-    "south_months": ["September", "October", "November", "December", "January", "February", "March", "April", "May"],
-    "north_month_label": "March-November",
-    "south_month_label": "September-May",
+    "north_months": ["March", "April", "May", "June", "July", "August", "September", "October"],
+    "south_months": ["September", "October", "November", "December", "January", "February", "March", "April"],
+    "north_month_label": "March-October",
+    "south_month_label": "September-April",
     "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c7/NH-Icon-manfacedstinkbug.png"
   },
   {
@@ -565,10 +565,10 @@
     "weather": "",
     "value": 1500,
     "time": ["All day"],
-    "north_months": ["February", "March", "April", "May", "June", "July", "August", "September", "October", "November"],
-    "south_months": ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May"],
-    "north_month_label": "February-November",
-    "south_month_label": "August-May",
+    "north_months": ["February", "March", "April", "May", "June", "July", "August", "September", "October"],
+    "south_months": ["August", "September", "October", "November", "December", "January", "February", "March", "April"],
+    "north_month_label": "February-October",
+    "south_month_label": "August-April",
     "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e3/NH-Icon-tigerbeetle.png"
   },
   {

@@ -457,10 +457,10 @@
     "fin": false,
     "value": 15000,
     "time": ["4pm - 9am"],
-    "north_months": ["March", "April", "May", "June", "September", "October", "November"],
+    "north_months": ["March", "April", "May", "September", "October", "November"],
     "south_months": ["March", "April", "May", "September", "October", "November", "December"],
-    "north_month_label": "March-June, September-November",
-    "south_month_label": "March-May, September-December",
+    "north_month_label": "March-May, September-November",
+    "south_month_label": "March-May, September-November",
     "image": "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5c/NH-Icon-goldentrout.png"
   },
   {
@@ -1065,7 +1065,7 @@
     "fin": false,
     "value": 10000,
     "time": ["All day"],
-    "north_months": ["June", "July", "August", "September", "November", "December", "January", "February", "March", "April"],
+    "north_months": ["July", "August", "September", "November", "December", "January", "February", "March", "April"],
     "south_months": ["January", "February", "March", "May", "June", "July", "August", "September", "October", "November"],
     "north_month_label": "July-September, November-April",
     "south_month_label": "January-March, May-November",
@@ -1266,7 +1266,7 @@
   {
     "no": 80,
     "name": "Coelacanth",
-    "location": "Sea (rainy days)",
+    "location": "Sea (Rainy days)",
     "specific_location": "",
     "weather": "Rain",
     "shadow": "Largest",
