@@ -43,9 +43,12 @@ const Villagers = (className) => {
                 });
                 setVillagersObj(obj);
                 setLoadingVillagers(false);
-                setFavouriteVillagers(
-                    JSON.parse(localStorage.getItem('favoriteVillagers'))
+                const savedFav = JSON.parse(
+                    localStorage.getItem('favoriteVillagers')
                 );
+                if (savedFav) {
+                    setFavouriteVillagers(savedFav);
+                }
             })
             .catch((err) => {
                 console.log(err);
