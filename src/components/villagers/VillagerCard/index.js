@@ -37,14 +37,43 @@ const Name = styled.h4`
     margin-bottom: 10px;
 `;
 
-const handleProfileClick = (name) => {
-    // console.log(name);
-};
+const ButtonContainer = styled.div`
+    text-align: right;
+    margin-bottom: 20px;
+`;
 
-const VillagerCard = ({ villager }) => {
+const VillagerCard = ({
+    villager,
+    handleAddVillager,
+    handleRemoveVillager,
+    favouriteVillagers,
+}) => {
+    const handleBtnClick = (e, name, type) => {
+        if (e.target.checked) {
+            handleAddVillager(name);
+        } else {
+            handleRemoveVillager(name);
+        }
+    };
+
     return (
         <Card>
-            <Profile onClick={() => handleProfileClick(villager.name)}>
+            <Profile>
+                <ButtonContainer>
+                    <input
+                        checked={favouriteVillagers.includes(villager.name)}
+                        type="checkbox"
+                        onChange={(e) =>
+                            handleBtnClick(e, villager.name, 'favourite')
+                        }
+                    />
+                    <input
+                        type="checkbox"
+                        onChange={(e) =>
+                            handleBtnClick(e, villager.name, 'have')
+                        }
+                    />
+                </ButtonContainer>
                 <Img
                     src={`/assets/villagers/${villager.filename}`}
                     alt={villager.name}

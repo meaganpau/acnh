@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Tabs from '../common/Tabs';
+import Tabs from '../../global/Tabs';
 import CritterList from '../common/CritterList';
 import ContentContainer from '../../global/ContentContainer';
 

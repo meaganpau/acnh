@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Tabs from '../../components/critterTable/common/Tabs';
+import Tabs from '../../components/global/Tabs';
 import PageContent from '../../components/critterTable/PageContent';
 import PageContainer from '../../components/global/PageContainer';
 import Title, { Logo } from '../../components/global/Title';

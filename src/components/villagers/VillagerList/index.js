@@ -39,7 +39,13 @@ const defaultFilter = {
     sex: '',
 };
 
-const VillagerList = ({ villagers, loadingVillagers }) => {
+const VillagerList = ({
+    villagers,
+    loadingVillagers,
+    handleAddVillager,
+    handleRemoveVillager,
+    favouriteVillagers,
+}) => {
     const [villagersList, setVillagersList] = useState([]);
     const [filterObj, setFilterObj] = useState(defaultFilter);
     const [searchTerm, setSearchTerm] = useState('');
@@ -86,7 +92,7 @@ const VillagerList = ({ villagers, loadingVillagers }) => {
     };
 
     return (
-        <ContentContainer>
+        <ContentContainer tabs={true}>
             <FilterContainer>
                 <Label>
                     <p>Search:</p>
@@ -106,7 +112,13 @@ const VillagerList = ({ villagers, loadingVillagers }) => {
             {villagersList.length ? (
                 <List>
                     {villagersList.map((villager) => (
-                        <VillagerCard key={villager.name} villager={villager} />
+                        <VillagerCard
+                            key={villager.name}
+                            villager={villager}
+                            handleAddVillager={handleAddVillager}
+                            handleRemoveVillager={handleRemoveVillager}
+                            favouriteVillagers={favouriteVillagers}
+                        />
                     ))}
                 </List>
             ) : loadingVillagers ? (
