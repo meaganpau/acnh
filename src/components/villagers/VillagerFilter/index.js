@@ -78,39 +78,39 @@ const VillagerFilter = ({ handleFilter, currentFilter }) => {
                     className="form-control"
                 >
                     <option value="">No species filter</option>
-                    <option>Bird</option>
-                    <option>Squirrel</option>
-                    <option>Pig</option>
-                    <option>Gorilla</option>
-                    <option>Koala</option>
                     <option>Alligator</option>
-                    <option>Eagle</option>
                     <option>Anteater</option>
-                    <option>Bull</option>
-                    <option>Mouse</option>
-                    <option>Cat</option>
-                    <option>Hamster</option>
-                    <option>Kangaroo</option>
-                    <option>Horse</option>
-                    <option>Penguin</option>
-                    <option>Chicken</option>
-                    <option>Wolf</option>
-                    <option>Cub</option>
-                    <option>Elephant</option>
-                    <option>Deer</option>
-                    <option>Tiger</option>
-                    <option>Sheep</option>
-                    <option>Dog</option>
                     <option>Bear</option>
-                    <option>Hippo</option>
-                    <option>Duck</option>
-                    <option>Goat</option>
-                    <option>Ostrich</option>
-                    <option>Rabbit</option>
-                    <option>Lion</option>
-                    <option>Frog</option>
-                    <option>Monkey</option>
+                    <option>Bird</option>
+                    <option>Bull</option>
+                    <option>Cat</option>
+                    <option>Chicken</option>
                     <option>Cow</option>
+                    <option>Cub</option>
+                    <option>Deer</option>
+                    <option>Dog</option>
+                    <option>Duck</option>
+                    <option>Eagle</option>
+                    <option>Elephant</option>
+                    <option>Frog</option>
+                    <option>Goat</option>
+                    <option>Gorilla</option>
+                    <option>Hamster</option>
+                    <option>Hippo</option>
+                    <option>Horse</option>
+                    <option>Kangaroo</option>
+                    <option>Koala</option>
+                    <option>Lion</option>
+                    <option>Monkey</option>
+                    <option>Mouse</option>
+                    <option>Ostrich</option>
+                    <option>Penguin</option>
+                    <option>Pig</option>
+                    <option>Rabbit</option>
+                    <option>Sheep</option>
+                    <option>Squirrel</option>
+                    <option>Tiger</option>
+                    <option>Wolf</option>
                 </select>
             </Label>
             <Label htmlFor="sex">

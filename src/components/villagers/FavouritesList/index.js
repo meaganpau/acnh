@@ -10,17 +10,13 @@ const List = styled.div`
     justify-content: space-between;
 `;
 
-const FavouritesList = ({
-    villagers,
-    handleRemoveVillager,
-    favouriteVillagers,
-}) => {
+const FavouritesList = ({ handleRemoveVillager, favouriteVillagers }) => {
     return (
         <ContentContainer tabs={true}>
             <List>
                 <VillagerContext.Consumer>
                     {(context) => {
-                        return villagers.map((villager) => {
+                        return favouriteVillagers.map((villager) => {
                             return (
                                 <VillagerCard
                                     key={context[villager].name}
