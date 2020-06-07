@@ -71,6 +71,7 @@ const timeSlots = {
     4: {
         label: "4am",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "5pm - 8am",
             "7pm - 8am",
@@ -83,6 +84,7 @@ const timeSlots = {
     5: {
         label: "5am",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "5pm - 8am",
             "7pm - 8am",
@@ -95,6 +97,7 @@ const timeSlots = {
     6: {
         label: "6am",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "5pm - 8am",
             "7pm - 8am",
@@ -107,6 +110,7 @@ const timeSlots = {
     7: {
         label: "7am",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "5pm - 8am",
             "7pm - 8am",
@@ -119,6 +123,7 @@ const timeSlots = {
     8: {
         label: "8am",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "4am - 5pm",
             "4am - 7pm",
@@ -130,6 +135,7 @@ const timeSlots = {
     9: {
         label: "9am",
         timeSlots: [
+            "4am - 9pm",
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
@@ -141,6 +147,7 @@ const timeSlots = {
     10: {
         label: "10am",
         timeSlots: [
+            "4am - 9pm",
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
@@ -155,6 +162,7 @@ const timeSlots = {
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
+            "4am - 9pm",
             "8am - 4pm",
             "8am - 5pm",
             "8am - 7pm",
@@ -166,6 +174,7 @@ const timeSlots = {
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
+            "4am - 9pm",
             "8am - 4pm",
             "8am - 5pm",
             "8am - 7pm",
@@ -177,6 +186,7 @@ const timeSlots = {
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
+            "4am - 9pm",
             "8am - 4pm",
             "8am - 5pm",
             "8am - 7pm",
@@ -188,6 +198,7 @@ const timeSlots = {
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
+            "4am - 9pm",
             "8am - 4pm",
             "8am - 5pm",
             "8am - 7pm",
@@ -199,6 +210,7 @@ const timeSlots = {
             "9am - 4pm",
             "4am - 5pm",
             "4am - 7pm",
+            "4am - 9pm",
             "8am - 4pm",
             "8am - 5pm",
             "8am - 7pm",
@@ -210,6 +222,7 @@ const timeSlots = {
             "4pm - 9am",
             "4am - 5pm",
             "4am - 7pm",
+            "4am - 9pm",
             "8am - 5pm",
             "8am - 7pm",
             "4pm - 7pm",
@@ -223,6 +236,7 @@ const timeSlots = {
             "4am - 7pm",
             "8am - 7pm",
             "4pm - 7pm",
+            "4am - 9pm",
             "4pm - 11pm",
             "5pm - 4am",
             "5pm - 7pm",
@@ -236,6 +250,7 @@ const timeSlots = {
             "4am - 7pm",
             "8am - 7pm",
             "4pm - 7pm",
+            "4am - 9pm",
             "4pm - 11pm",
             "5pm - 4am",
             "5pm - 7pm",
@@ -245,6 +260,7 @@ const timeSlots = {
     19: {
         label: "7pm",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "4pm - 11pm",
             "5pm - 4am",
@@ -256,6 +272,7 @@ const timeSlots = {
     20: {
         label: "8pm",
         timeSlots: [
+            "4am - 9pm",
             "4pm - 9am",
             "4pm - 11pm",
             "5pm - 4am",
