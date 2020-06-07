@@ -43,20 +43,17 @@ const Villagers = (className) => {
                 });
                 setVillagersObj(obj);
                 setLoadingVillagers(false);
-                // get local storage JSON.parse(localStorage.getItem('favoriteVillagers'))
-                // setFavouriteVillagers(JSON.parse(localStorage.getItem('favoriteVillagers')))
+                const savedFav = JSON.parse(
+                    localStorage.getItem('favoriteVillagers')
+                );
+                if (savedFav) {
+                    setFavouriteVillagers(savedFav);
+                }
             })
             .catch((err) => {
                 console.log(err);
             });
     }, []);
-
-    useEffect(() => {
-        localStorage.setItem(
-            'favoriteVillagers',
-            JSON.stringify(favouriteVillagers)
-        );
-    }, [favouriteVillagers]);
 
     const handleTabChange = (e, tab) => {
         e.preventDefault();
@@ -67,12 +64,14 @@ const Villagers = (className) => {
         const villagers = [...favouriteVillagers];
         villagers.push(villagerName);
         setFavouriteVillagers(villagers);
+        localStorage.setItem('favoriteVillagers', JSON.stringify(villagers));
     };
 
     const handleRemoveVillager = (villagerName) => {
         const villagers = [...favouriteVillagers];
         villagers.splice(villagers.indexOf(villagerName), 1); // will return ['B'] and t is now equal to ['A', 'C', 'B']
         setFavouriteVillagers(villagers);
+        localStorage.setItem('favoriteVillagers', JSON.stringify(villagers));
     };
 
     return (
