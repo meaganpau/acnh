@@ -25,6 +25,7 @@ const Page = styled(PageContainer)`
 const CritterDex = () => {
     const [fish, setFish] = useState([]);
     const [bugs, setBugs] = useState([]);
+    const [seaCritters, setSeaCritters] = useState([]);
     const [hemisphere, setHemisphere] = useState('north');
     const [critter, setCritter] = useState('fish');
 
@@ -58,6 +59,21 @@ const CritterDex = () => {
             .catch((err) => {
                 console.log(err);
             });
+
+        fetch('/api/sea-critters')
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                } else {
+                    throw new Error('Something went wrong...');
+                }
+            })
+            .then((data) => {
+                setSeaCritters(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }, []);
 
     const handleHemisphereChange = (e, hemisphere) => {
@@ -80,7 +96,11 @@ const CritterDex = () => {
         });
     };
 
-    const data = critter === 'bug' ? bugs : fish;
+    const dataMap = {
+        bug: bugs,
+        fish: fish,
+        seaCritter: seaCritters,
+    };
 
     return (
         <Page>
@@ -93,7 +113,7 @@ const CritterDex = () => {
                 <li className="nav-item">
                     <a
                         className={`nav-link ${
-                            hemisphere === 'north' ? 'active' : ''
+                            hemisphere === 'north' && 'active'
                         }`}
                         href="# "
                         onClick={(e) => handleHemisphereChange(e, 'north')}
@@ -104,7 +124,7 @@ const CritterDex = () => {
                 <li className="nav-item">
                     <a
                         className={`nav-link ${
-                            hemisphere === 'south' ? 'active' : ''
+                            hemisphere === 'south' && 'active'
                         }`}
                         href="# "
                         onClick={(e) => handleHemisphereChange(e, 'south')}
@@ -117,7 +137,7 @@ const CritterDex = () => {
                 critter={critter}
                 handleCritterChange={handleCritterChange}
                 hemisphere={hemisphere}
-                data={data}
+                data={dataMap[critter]}
             />
             <Link
                 className="App-link"

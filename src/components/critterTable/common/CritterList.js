@@ -12,6 +12,7 @@ import timeSlots from '../../../util/timeSlots';
 import { event } from '../../../util/gtag';
 import FishColumns from '../Table/fishColumns';
 import BugColumns from '../Table/bugColumns';
+import SeaCritterColumns from '../Table/seaCritterColumns';
 
 const Container = styled.div`
     background: #fff;
@@ -163,6 +164,18 @@ const filterTime = (filterVal, data) => {
     return data;
 };
 
+const critterEmojiMap = {
+    fish: '🐟',
+    bug: '🐛',
+    'sea-critter': '🐙',
+};
+
+const critterTitleMap = {
+    fish: 'Fish',
+    bug: 'Bug',
+    'sea-critter': 'Sea Critter',
+};
+
 const CritterList = ({ data, critter, hemisphere }) => {
     const [inputVal, setInputVal] = useState('');
     const [month, setMonthFilter] = useState('');
@@ -251,22 +264,36 @@ const CritterList = ({ data, critter, hemisphere }) => {
         },
     ];
 
-    const columns =
-        critter === 'fish'
-            ? FishColumns(
-                  hemisphere,
-                  setNameTableFilter,
-                  setTimeTableFilter,
-                  setMonthTableFilter,
-                  filterTime
-              )
-            : BugColumns(
-                  hemisphere,
-                  setNameTableFilter,
-                  setTimeTableFilter,
-                  setMonthTableFilter,
-                  filterTime
-              );
+    let columns;
+    switch (critter) {
+        case 'fish':
+            columns = FishColumns(
+                hemisphere,
+                setNameTableFilter,
+                setTimeTableFilter,
+                setMonthTableFilter,
+                filterTime
+            );
+            break;
+        case 'bug':
+            columns = BugColumns(
+                hemisphere,
+                setNameTableFilter,
+                setTimeTableFilter,
+                setMonthTableFilter,
+                filterTime
+            );
+            break;
+        case 'sea-critter':
+            columns = SeaCritterColumns(
+                hemisphere,
+                setNameTableFilter,
+                setTimeTableFilter,
+                setMonthTableFilter,
+                filterTime
+            );
+            break;
+    }
 
     return (
         <ToolkitProvider
@@ -281,9 +308,9 @@ const CritterList = ({ data, critter, hemisphere }) => {
             {(props) => (
                 <Container>
                     <Title>
-                        {critter} List{' '}
+                        {critterTitleMap[critter]} List{' '}
                         <span role="img" aria-label="">
-                            {critter === 'fish' ? '🐟' : '🐛'}
+                            {critterEmojiMap[critter]}
                         </span>
                     </Title>
                     <Buttons>
@@ -335,7 +362,7 @@ const CritterList = ({ data, critter, hemisphere }) => {
                             {...props.baseProps}
                             defaultSorted={defaultSorted}
                             filter={filterFactory()}
-                            noDataIndication="No fish found :("
+                            noDataIndication="No critters found :("
                         />
                     </TableContainer>
                 </Container>

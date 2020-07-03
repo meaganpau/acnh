@@ -39,6 +39,17 @@ const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
                         Bugs List
                     </a>
                 </li>
+                <li className="nav-item">
+                    <a
+                        className={`nav-link ${
+                            critter === 'sea-critter' ? 'active' : ''
+                        }`}
+                        href="# "
+                        onClick={(e) => handleCritterChange(e, 'sea-critter')}
+                    >
+                        Sea Critter List
+                    </a>
+                </li>
             </Tabs>
             <CritterList
                 data={data}

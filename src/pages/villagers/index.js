@@ -24,7 +24,6 @@ const Villagers = (className) => {
     const [loadingVillagers, setLoadingVillagers] = useState(true);
     const [currentTab, setCurrentTab] = useState('villagers');
     const [favouriteVillagers, setFavouriteVillagers] = useState([]);
-    const [haveVillagers, setHaveVillagers] = useState([]);
 
     useEffect(() => {
         fetch('/api/villagers')
