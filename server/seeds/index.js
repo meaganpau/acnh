@@ -41,7 +41,7 @@ const data = [
         documents: VillagerData,
     },
     {
-        model: 'Sea Critter',
+        model: 'SeaCritter',
         documents: SeaCritterData,
     },
 ];
