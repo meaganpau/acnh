@@ -13,37 +13,32 @@ const Title = styled.h3`
 `;
 
 const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
+    const isActive = (tabName) => (tabName === critter ? 'active' : '');
     return (
         <ContentContainer tabs={true}>
             <Title>{hemisphere}ern Hemisphere</Title>
             <Tabs>
-                <li className="nav-item">
+                <li className={`nav-item ${isActive('fish')}`}>
                     <a
-                        className={`nav-link ${
-                            critter === 'fish' ? 'active' : ''
-                        }`}
+                        className={`nav-link ${isActive('fish')}`}
                         href="# "
                         onClick={(e) => handleCritterChange(e, 'fish')}
                     >
                         Fish List
                     </a>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${isActive('bug')}`}>
                     <a
-                        className={`nav-link ${
-                            critter === 'bug' ? 'active' : ''
-                        }`}
+                        className={`nav-link ${isActive('bug')}`}
                         href="# "
                         onClick={(e) => handleCritterChange(e, 'bug')}
                     >
                         Bugs List
                     </a>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${isActive('seaCreature')}`}>
                     <a
-                        className={`nav-link ${
-                            critter === 'seaCreature' ? 'active' : ''
-                        }`}
+                        className={`nav-link ${isActive('seaCreature')}`}
                         href="# "
                         onClick={(e) => handleCritterChange(e, 'seaCreature')}
                     >

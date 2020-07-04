@@ -8,8 +8,18 @@ const StyledTabs = styled.ul`
 
     .nav-item {
         background: #ececec;
-        border-top-left-radius: .25rem;
-        border-top-right-radius: .25rem;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        border: 1px solid #dee2e6;
+        border-bottom: none;
+
+        + .nav-item {
+            border-left: none;
+        }
+    }
+
+    .nav-link {
+        border: none;
     }
 `;
 

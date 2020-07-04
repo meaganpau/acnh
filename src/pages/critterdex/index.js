@@ -102,6 +102,9 @@ const CritterDex = () => {
         seaCreature: seaCreatures,
     };
 
+    const activeTab = (tabHemisphere) =>
+        tabHemisphere === hemisphere ? 'active' : '';
+
     return (
         <Page>
             <Title>
@@ -112,9 +115,7 @@ const CritterDex = () => {
             <Tabs className="nav nav-tabs hemisphere-tabs" role="tablist">
                 <li className="nav-item">
                     <a
-                        className={`nav-link ${
-                            hemisphere === 'north' && 'active'
-                        }`}
+                        className={`nav-link ${activeTab('north')}`}
                         href="# "
                         onClick={(e) => handleHemisphereChange(e, 'north')}
                     >
@@ -123,9 +124,7 @@ const CritterDex = () => {
                 </li>
                 <li className="nav-item">
                     <a
-                        className={`nav-link ${
-                            hemisphere === 'south' && 'active'
-                        }`}
+                        className={`nav-link ${activeTab('south')}`}
                         href="# "
                         onClick={(e) => handleHemisphereChange(e, 'south')}
                     >

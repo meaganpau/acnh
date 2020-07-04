@@ -11,7 +11,7 @@ import FavouritesList from '../../components/villagers/FavouritesList';
 const VillagerListTab = styled.div`
     display: ${(props) => {
         return props.show ? 'block' : 'none';
-    }}};
+    }};
 `;
 
 const FavouritesListTab = styled.div`
@@ -73,6 +73,8 @@ const Villagers = (className) => {
         localStorage.setItem('favoriteVillagers', JSON.stringify(villagers));
     };
 
+    const activeTab = (tabName) => (tabName === currentTab ? 'active' : '');
+
     return (
         <VillagerContext.Provider value={villagersObj}>
             <PageContainer className={className}>
@@ -84,9 +86,7 @@ const Villagers = (className) => {
                 <Tabs>
                     <li className="nav-item">
                         <a
-                            className={`nav-link ${
-                                currentTab === 'villagers' ? 'active' : ''
-                            }`}
+                            className={`nav-link ${activeTab('villagers')}`}
                             href="# "
                             onClick={(e) => handleTabChange(e, 'villagers')}
                         >
@@ -95,9 +95,7 @@ const Villagers = (className) => {
                     </li>
                     <li className="nav-item">
                         <a
-                            className={`nav-link ${
-                                currentTab === 'favourites' ? 'active' : ''
-                            }`}
+                            className={`nav-link ${activeTab('favourites')}`}
                             href="# "
                             onClick={(e) => handleTabChange(e, 'favourites')}
                         >
