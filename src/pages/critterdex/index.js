@@ -25,7 +25,7 @@ const Page = styled(PageContainer)`
 const CritterDex = () => {
     const [fish, setFish] = useState([]);
     const [bugs, setBugs] = useState([]);
-    const [seaCritters, setSeaCritters] = useState([]);
+    const [seaCreatures, setSeaCreatures] = useState([]);
     const [hemisphere, setHemisphere] = useState('north');
     const [critter, setCritter] = useState('fish');
 
@@ -60,7 +60,7 @@ const CritterDex = () => {
                 console.log(err);
             });
 
-        fetch('/api/sea-critters')
+        fetch('/api/sea-creatures')
             .then((res) => {
                 if (res.ok) {
                     return res.json();
@@ -69,7 +69,7 @@ const CritterDex = () => {
                 }
             })
             .then((data) => {
-                setSeaCritters(data);
+                setSeaCreatures(data);
             })
             .catch((err) => {
                 console.log(err);
@@ -99,7 +99,7 @@ const CritterDex = () => {
     const dataMap = {
         bug: bugs,
         fish: fish,
-        seaCritter: seaCritters,
+        seaCreature: seaCreatures,
     };
 
     return (
@@ -108,7 +108,7 @@ const CritterDex = () => {
                 <Logo src="/logo192.png" alt="Critterdex Logo" />
                 Critterdex
             </Title>
-            <Subtitle>Bug, fish, and sea critter list from ACNH</Subtitle>
+            <Subtitle>Bug, fish, and sea creatures list from ACNH</Subtitle>
             <Tabs className="nav nav-tabs hemisphere-tabs" role="tablist">
                 <li className="nav-item">
                     <a

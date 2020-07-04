@@ -19,7 +19,7 @@
 // 7pm - 8am
 // 11pm - 8am
 
-//sea critters
+//sea creatures
 // 4pm - 9am
 // 9pm - 4am
 // 9am - 4pm

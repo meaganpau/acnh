@@ -3,7 +3,7 @@ const seeder = require('mongoose-seed');
 const FishData = require('./data/fish.json');
 const BugData = require('./data/bugs.json');
 const VillagerData = require('./data/villagers.json');
-const SeaCritterData = require('./data/seaCritters.json');
+const SeaCreatureData = require('./data/seaCreatures.json');
 
 const MONGOOSE_URI = process.env.MONGODB_URI;
 
@@ -12,9 +12,9 @@ seeder.connect(MONGOOSE_URI, function () {
         'server/models/Fish.js',
         'server/models/Bug.js',
         'server/models/Villager.js',
-        'server/models/SeaCritter.js',
+        'server/models/SeaCreature.js',
     ]);
-    seeder.clearModels(['Fish', 'Bug', 'Villager', 'SeaCritter'], function () {
+    seeder.clearModels(['Fish', 'Bug', 'Villager', 'SeaCreature'], function () {
         seeder.populateModels(data, function (err, done) {
             if (err) {
                 return console.log('Error: ', err);
@@ -41,7 +41,7 @@ const data = [
         documents: VillagerData,
     },
     {
-        model: 'SeaCritter',
-        documents: SeaCritterData,
+        model: 'SeaCreature',
+        documents: SeaCreatureData,
     },
 ];

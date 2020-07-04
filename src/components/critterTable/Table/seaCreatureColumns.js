@@ -1,7 +1,7 @@
 import { textFilter } from 'react-bootstrap-table2-filter';
 import { imageFormatter, arrayFormatter } from './formatters';
 
-const seaCritterColumns = (
+const SeaCreatureColumns = (
     hemisphere,
     setNameTableFilter,
     setTimeTableFilter,
@@ -89,4 +89,4 @@ const seaCritterColumns = (
     },
 ];
 
-export default seaCritterColumns;
+export default SeaCreatureColumns;

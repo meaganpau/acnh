@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const SeaCritterSchema = new Schema({
+const SeaCreatureSchema = new Schema({
     no: {
         type: Number,
         unique: true,
@@ -32,6 +32,6 @@ const SeaCritterSchema = new Schema({
     },
 });
 
-const SeaCritter = mongoose.model('SeaCritter', SeaCritterSchema);
+const SeaCreature = mongoose.model('SeaCreature', SeaCreatureSchema);
 
-module.exports = SeaCritter;
+module.exports = SeaCreature;

@@ -3,7 +3,7 @@ const routes = express.Router();
 const fish = require('./fish');
 const bugs = require('./bugs');
 const villagers = require('./villagers');
-const seaCritters = require('./seaCritters');
+const seaCreatures = require('./seaCreatures');
 
 routes.get('/', (req, res) => {
     res.status(200).json({
@@ -14,6 +14,6 @@ routes.get('/', (req, res) => {
 routes.use('/fish', fish);
 routes.use('/bugs', bugs);
 routes.use('/villagers', villagers);
-routes.use('/sea-critters', seaCritters);
+routes.use('/sea-creatures', seaCreatures);
 
 module.exports = routes;

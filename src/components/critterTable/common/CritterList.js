@@ -12,7 +12,7 @@ import timeSlots from '../../../util/timeSlots';
 import { event } from '../../../util/gtag';
 import FishColumns from '../Table/fishColumns';
 import BugColumns from '../Table/bugColumns';
-import SeaCritterColumns from '../Table/seaCritterColumns';
+import SeaCreatureColumns from '../Table/seaCreatureColumns';
 
 const Container = styled.div`
     background: #fff;
@@ -169,13 +169,13 @@ const filterTime = (filterVal, data) => {
 const critterEmojiMap = {
     fish: '🐟',
     bug: '🐛',
-    seaCritter: '🐙',
+    seaCreature: '🐙',
 };
 
 const critterTitleMap = {
     fish: 'Fish',
     bug: 'Bug',
-    seaCritter: 'Sea Critter',
+    seaCreature: 'Sea Creatures',
 };
 
 const CritterList = ({ data, critter, hemisphere }) => {
@@ -277,8 +277,8 @@ const CritterList = ({ data, critter, hemisphere }) => {
                 filterTime
             );
             break;
-        case 'seaCritter':
-            columns = SeaCritterColumns(
+        case 'seaCreature':
+            columns = SeaCreatureColumns(
                 hemisphere,
                 setNameTableFilter,
                 setTimeTableFilter,

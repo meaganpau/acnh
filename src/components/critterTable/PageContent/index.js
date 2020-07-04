@@ -42,12 +42,12 @@ const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
                 <li className="nav-item">
                     <a
                         className={`nav-link ${
-                            critter === 'seaCritter' ? 'active' : ''
+                            critter === 'seaCreature' ? 'active' : ''
                         }`}
                         href="# "
-                        onClick={(e) => handleCritterChange(e, 'seaCritter')}
+                        onClick={(e) => handleCritterChange(e, 'seaCreature')}
                     >
-                        Sea Critter List
+                        Sea Creatures List
                     </a>
                 </li>
             </Tabs>
