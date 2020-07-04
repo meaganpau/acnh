@@ -99,7 +99,7 @@ const CritterDex = () => {
     const dataMap = {
         bug: bugs,
         fish: fish,
-        'sea-critter': seaCritters,
+        seaCritter: seaCritters,
     };
 
     return (

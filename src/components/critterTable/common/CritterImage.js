@@ -6,6 +6,6 @@ const Image = styled.img`
     max-height: 50px;
 `
 
-const CritterImage = ({ src, alt }) => <Image src={src} alt={alt}/>
+const CritterImage = ({ src, alt }) => <Image src={src} alt={alt} />
 
 export default CritterImage

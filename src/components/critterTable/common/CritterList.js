@@ -169,13 +169,13 @@ const filterTime = (filterVal, data) => {
 const critterEmojiMap = {
     fish: '🐟',
     bug: '🐛',
-    'sea-critter': '🐙',
+    seaCritter: '🐙',
 };
 
 const critterTitleMap = {
     fish: 'Fish',
     bug: 'Bug',
-    'sea-critter': 'Sea Critter',
+    seaCritter: 'Sea Critter',
 };
 
 const CritterList = ({ data, critter, hemisphere }) => {
@@ -277,7 +277,7 @@ const CritterList = ({ data, critter, hemisphere }) => {
                 filterTime
             );
             break;
-        case 'sea-critter':
+        case 'seaCritter':
             columns = SeaCritterColumns(
                 hemisphere,
                 setNameTableFilter,
@@ -293,8 +293,8 @@ const CritterList = ({ data, critter, hemisphere }) => {
                 setTimeTableFilter,
                 setMonthTableFilter,
                 filterTime
-        );
-        break;
+            );
+            break;
     }
 
     return (
