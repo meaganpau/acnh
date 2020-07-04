@@ -69,7 +69,7 @@
     "no": 7,
     "name": "Slate Pencil Urchin",
     "value": 2000,
-    "time": "4pm – 9am",
+    "time": "4pm - 9am",
     "north_months": ["May", "June", "July", "August", "September"],
     "south_months": ["November", "December", "January", "February", "March"],
     "north_month_label": "May-September",
