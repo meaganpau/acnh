@@ -377,7 +377,7 @@
     "no": 35,
     "name": "Giant Isopod",
     "value": 12000,
-    "time": "9am - 4pm; 9pm - 4am",
+    "time": "9am - 4pm, 9pm - 4am",
     "north_months": ["July", "August", "September", "October"],
     "south_months": ["January", "February", "March", "April"],
     "north_month_label": "July-October",
@@ -437,6 +437,6 @@
     "south_months": ["April", "May", "June", "July", "August"],
     "north_month_label": "October-February",
     "south_month_label": "April-August",
-    "image": "https://animalcrossingworld.com/wp-content/uploads/2020/06/animal-crossing-new-horizons-guide-sea-creature-icon-venus'-flower-basket-crop.png"
+    "image": "https://animalcrossingworld.com/wp-content/uploads/2020/06/animal-crossing-new-horizons-guide-sea-creature-icon-venus-flower-basket-crop.png"
   }
 ]

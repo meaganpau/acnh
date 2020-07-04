@@ -47,6 +47,8 @@ const Container = styled.div`
             th:first-of-type {
                 border-left: 0;
                 padding-left: 30px;
+                padding-right: 30px;
+                text-align: center;
             }
 
             td:last-of-type,
@@ -266,15 +268,6 @@ const CritterList = ({ data, critter, hemisphere }) => {
 
     let columns;
     switch (critter) {
-        case 'fish':
-            columns = FishColumns(
-                hemisphere,
-                setNameTableFilter,
-                setTimeTableFilter,
-                setMonthTableFilter,
-                filterTime
-            );
-            break;
         case 'bug':
             columns = BugColumns(
                 hemisphere,
@@ -293,6 +286,15 @@ const CritterList = ({ data, critter, hemisphere }) => {
                 filterTime
             );
             break;
+        default:
+            columns = FishColumns(
+                hemisphere,
+                setNameTableFilter,
+                setTimeTableFilter,
+                setMonthTableFilter,
+                filterTime
+        );
+        break;
     }
 
     return (
