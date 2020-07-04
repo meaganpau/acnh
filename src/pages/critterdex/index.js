@@ -108,7 +108,7 @@ const CritterDex = () => {
                 <Logo src="/logo192.png" alt="Critterdex Logo" />
                 Critterdex
             </Title>
-            <Subtitle>Bug and fish list from ACNH</Subtitle>
+            <Subtitle>Bug, fish, and sea critter list from ACNH</Subtitle>
             <Tabs className="nav nav-tabs hemisphere-tabs" role="tablist">
                 <li className="nav-item">
                     <a
