@@ -42,7 +42,7 @@ const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
                         href="# "
                         onClick={(e) => handleCritterChange(e, 'seaCreature')}
                     >
-                        Sea Creatures List
+                        Sea Creatures
                     </a>
                 </li>
             </Tabs>
