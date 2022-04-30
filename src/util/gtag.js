@@ -1,4 +1,4 @@
-export const trackingId = "UA-162460085-1"
+export const trackingId = "G-6CT8GEMVBM"
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = url => {
