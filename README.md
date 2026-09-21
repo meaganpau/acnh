@@ -20,7 +20,7 @@ The React app asks for data at `/api/...`, and the `"proxy"` setting in `package
 
 ## Run it locally
 
-Last tested with Node v26.3.1, Yarn 1.22, and MongoDB 8.3 installed with Homebrew on a Mac.
+You need **Node 20.19 or newer** (`.nvmrc` says 24) and Yarn 1. Last tested with Node v26.3.1, Yarn 1.22, and MongoDB 8.3 installed with Homebrew on a Mac.
 
 ### One-time setup
 
@@ -56,9 +56,9 @@ Last tested with Node v26.3.1, Yarn 1.22, and MongoDB 8.3 installed with Homebre
    yarn seed
    ```
 
-   This fills the database from the JSON files in `server/seeds/data`. When it prints `Done:` it may not exit by itself, so press `Ctrl+C`.
+   This fills the database from the JSON files in `server/seeds/data`, prints how many documents it loaded, and exits.
 
-   > **Careful:** `yarn seed` first **deletes** the fish, bugs, sea creatures and villagers collections in whatever database `MONGODB_URI` points to. Only run it while `.env` points at your local MongoDB (`mongodb://127.0.0.1...`), never at the production database.
+   > **Careful:** `yarn seed` first **deletes** the fish, bugs, sea creatures and villagers collections in whatever database `MONGODB_URI` points to. Only run it while `.env` points at your local MongoDB (`mongodb://127.0.0.1...`), never at the production database. To protect you, the seed script refuses to run unless `MONGODB_URI` points at a local MongoDB. (You can override that with `SEED_ALLOW_REMOTE=true yarn seed`, but only do that on purpose.)
 
 ### Every time you want to work on it
 
@@ -69,7 +69,9 @@ yarn server     # terminal 1: API on http://localhost:8000
 yarn start      # terminal 2: app on http://localhost:3100
 ```
 
-Open http://localhost:3100. If the page loads but the tables are empty or stuck loading, the API can't reach MongoDB. See [Troubleshooting](#troubleshooting).
+`yarn server` restarts by itself when you change a server file, but **not** when you edit `.env`. After changing `.env`, stop it with `Ctrl+C` and start it again.
+
+Open http://localhost:3100. If the page loads but the tables are empty or stuck loading, check that MongoDB is running (`brew services list`) and look at what `yarn server` printed. If it can't reach the database it exits after 5 seconds with a message saying so.
 
 ### Looking at the database
 
@@ -101,18 +103,32 @@ The React dev server's port (3100) is set in the `start` script in `package.json
 | --- | --- |
 | `yarn start` | Runs the React app in development on port 3100 |
 | `yarn server` | Runs the API (auto-restarts when files change) |
-| `yarn seed` | Empties and reloads the database from `server/seeds/data` |
+| `yarn seed` | Empties and reloads the database from `server/seeds/data` (local MongoDB only) |
 | `yarn build` | Builds the React app into `build/` |
 | `yarn test` | Runs the tests |
 
 `start` and `build` set `NODE_OPTIONS=--openssl-legacy-provider`. The old build tools (react-scripts 3.4.1 / webpack 4) don't work with the encryption library in modern Node without it.
 
+## Checking for vulnerable packages
+
+Only three packages run on the server: `express`, `mongoose` and `dotenv` (listed under `dependencies` in `package.json`). Everything else is used to build the React app on your computer and is listed under `devDependencies`. It never runs on the server.
+
+```
+yarn audit --groups dependencies    # what the live server runs (this is the one that matters)
+yarn audit                          # everything, including build tools (long, mostly noise)
+yarn outdated                       # what has newer versions
+```
+
+A vulnerability in a build tool can affect your laptop while you build, but it can't be reached through the website.
+
 ## Production
 
-The live site runs on a DigitalOcean server, managed by [pm2](https://pm2.keymetrics.io/), with its database on MongoDB Atlas. The production `.env` is in the app's working directory on that server. To find the folder, run `pm2 show <app-name>` and look for `exec cwd`. The deploy steps aren't written down yet.
+The live site runs on a DigitalOcean server, managed by [pm2](https://pm2.keymetrics.io/), with its database on MongoDB Atlas. pm2 runs `/var/www/critterdex.meaganpau.com/html/server/index.js` from that same `server` folder, so the production `.env` is `/var/www/critterdex.meaganpau.com/html/server/.env`. (`dotenv` reads `.env` from the folder the process was started in.) The built React app is served from `/var/www/critterdex.meaganpau.com/html/build`.
+
+**Heads up:** the server still runs Node 12 on Ubuntu 18.04, which is too old for this version of the app (it needs Node 20.19 or newer). Don't upload this version to the server until the server has been upgraded. The deploy steps aren't written down yet.
 
 The `Procfile` and the `heroku-postbuild` script are leftovers from when the app ran on Heroku.
 
 ## Stack
 
-MERN: MongoDB, Express, React, Node.js. React 16 (Create React App 3.4), Express 4, and Mongoose 5 for the database.
+MERN: MongoDB, Express, React, Node.js. React 16 (Create React App 3.4), Express 5, and Mongoose 9 for the database.
