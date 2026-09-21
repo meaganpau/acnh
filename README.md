@@ -107,8 +107,6 @@ The React dev server's port (3100) is set in the `start` script in `package.json
 | `yarn build` | Builds the React app into `build/` |
 | `yarn test` | Runs the tests |
 
-`start` and `build` set `NODE_OPTIONS=--openssl-legacy-provider`. The old build tools (react-scripts 3.4.1 / webpack 4) don't work with the encryption library in modern Node without it.
-
 ## Checking for vulnerable packages
 
 Only three packages run on the server: `express`, `mongoose` and `dotenv` (listed under `dependencies` in `package.json`). Everything else is used to build the React app on your computer and is listed under `devDependencies`. It never runs on the server.
@@ -125,10 +123,8 @@ A vulnerability in a build tool can affect your laptop while you build, but it c
 
 The live site runs on a DigitalOcean server, managed by [pm2](https://pm2.keymetrics.io/), with its database on MongoDB Atlas. pm2 runs `/var/www/critterdex.meaganpau.com/html/server/index.js` from that same `server` folder, so the production `.env` is `/var/www/critterdex.meaganpau.com/html/server/.env`. (`dotenv` reads `.env` from the folder the process was started in.) The built React app is served from `/var/www/critterdex.meaganpau.com/html/build`.
 
-**Heads up:** the server still runs Node 12 on Ubuntu 18.04, which is too old for this version of the app (it needs Node 20.19 or newer). Don't upload this version to the server until the server has been upgraded. The deploy steps aren't written down yet.
-
 The `Procfile` and the `heroku-postbuild` script are leftovers from when the app ran on Heroku.
 
 ## Stack
 
-MERN: MongoDB, Express, React, Node.js. React 16 (Create React App 3.4), Express 5, and Mongoose 9 for the database.
+MERN: MongoDB, Express, React, Node.js. React 16 (Create React App 5), Express 5, and Mongoose 9 for the database.

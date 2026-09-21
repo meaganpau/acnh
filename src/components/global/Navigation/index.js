@@ -45,7 +45,7 @@ const Navigation = () => {
             <LeftStyledLink to="/" getProps={isActive}>
                 Critterdex
             </LeftStyledLink>
-            <RightStyledLink getProps={isActive} to="villagers" onClick>
+            <RightStyledLink getProps={isActive} to="villagers">
                 Villagers
             </RightStyledLink>
         </Nav>
