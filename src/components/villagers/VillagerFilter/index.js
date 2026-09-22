@@ -35,8 +35,13 @@ const Label = styled.label`
 `;
 
 const VillagerFilter = ({ handleFilter, currentFilter }) => {
+    // handleFilter is passed down from the parent without useCallback, so
+    // its reference changes every parent render. Adding it here would
+    // re-fire this effect on every parent render, not just when
+    // currentFilter changes.
     useEffect(() => {
         handleFilter(currentFilter);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentFilter]);
 
     const handleFilterChange = (e) => {

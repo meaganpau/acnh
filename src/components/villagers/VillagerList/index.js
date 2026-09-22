@@ -54,9 +54,16 @@ const VillagerList = ({
         setVillagersList(villagers);
     }, [villagers]);
 
+    // filterObj is mutated in place (not replaced via setFilterObj), so its
+    // reference never changes and adding it here wouldn't re-run this
+    // effect any differently. handleFilter is passed down from the parent
+    // without useCallback, so its reference changes every parent render —
+    // adding it would re-fire this effect on every parent render, not just
+    // when searchTerm changes.
     useEffect(() => {
         filterObj.name = searchTerm;
         handleFilter(filterObj);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchTerm]);
 
     const handleSearch = (term) => {

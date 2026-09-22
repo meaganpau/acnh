@@ -195,8 +195,13 @@ const CritterList = ({ data, critter, hemisphere }) => {
         setMonthFilter('');
     };
 
+    // handleReset is redefined every render and reads the current
+    // nameTableFilter/monthTableFilter/timeTableFilter state, so adding it
+    // to the dependency array would re-run this effect (and its setState
+    // calls) on every render, not just when hemisphere changes.
     useEffect(() => {
         handleReset();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [hemisphere]);
 
     const handleSearch = (val) => {

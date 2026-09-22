@@ -60,7 +60,7 @@ const VillagerCard = ({
         } else {
             setFav(false);
         }
-    }, [favouriteVillagers]);
+    }, [favouriteVillagers, villager.name]);
 
     const handleBtnClick = (e, name, type) => {
         if (!isFav) {
