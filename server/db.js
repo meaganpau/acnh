@@ -13,15 +13,6 @@ if (!cached) {
 async function connectToDatabase() {
     const MONGODB_URI = process.env.MONGODB_URI;
 
-    // TEMPORARY DIAGNOSTIC — remove once the Vercel auth issue is resolved.
-    // Logs only length + a hash, never the actual credentials, so this is
-    // safe to leave in Vercel's logs in the meantime.
-    if (MONGODB_URI) {
-        const crypto = require('crypto');
-        const hash = crypto.createHash('sha256').update(MONGODB_URI).digest('hex').slice(0, 12);
-        console.log(`[debug] MONGODB_URI length=${MONGODB_URI.length} sha256[0:12]=${hash}`);
-    }
-
     if (!MONGODB_URI) {
         throw new Error(
             'MONGODB_URI is not set. Copy .env.example to .env and set it (see README.md).'
