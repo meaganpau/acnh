@@ -9,6 +9,10 @@ const StyledContentContainer = styled.div`
     padding-top: 30px;
     border: 1px solid #dee2e6;
     border-top: none;
+
+    @media screen and (max-width: 581px) {
+        padding: 10px 5px;
+    }
 `;
 
 const ContentContainer = ({ tabs, children }) => {

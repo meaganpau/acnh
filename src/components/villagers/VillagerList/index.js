@@ -14,21 +14,49 @@ const List = styled.div`
 const FilterContainer = styled.div`
     max-width: 800px;
     margin: 0 auto 20px;
+
+    /* Search on its own row, then the three filters and the button in pairs */
+    @media screen and (max-width: 581px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
 `;
 
 const Button = styled.button`
     margin: 0 auto;
     background-color: ${(props) => props.theme.colors.darkBlue};
     color: #fff;
+
+    @media screen and (max-width: 581px) {
+        width: 100%;
+    }
 `;
 
 const Label = styled.label`
+    display: block;
     margin-top: 20px;
 
     p {
         margin: 0;
         margin-right: 10px;
         font-weight: 500;
+    }
+
+    @media screen and (max-width: 581px) {
+        grid-column: 1 / -1;
+        margin: 0;
+
+        /* The placeholder already says what this is */
+        p {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
     }
 `;
 

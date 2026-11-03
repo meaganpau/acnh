@@ -1,5 +1,5 @@
 import { textFilter } from 'react-bootstrap-table2-filter';
-import { imageFormatter, arrayFormatter } from './formatters'
+import { imageFormatter, arrayFormatter, shortHeader } from './formatters'
 
 const fishColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMonthTableFilter, filterTime) => [
     {
@@ -42,6 +42,7 @@ const fishColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMont
     {
         dataField: 'shadow',
         text: 'Shadow Size',
+        headerFormatter: shortHeader('Shadow'),
         sort: true
     },
     {
@@ -52,6 +53,7 @@ const fishColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMont
     {
         dataField: 'value',
         text: 'Sell Value',
+        headerFormatter: shortHeader('Price'),
         sort: true,
     },
     {
@@ -97,12 +99,14 @@ const fishColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMont
     {
         dataField: 'north_month_label',
         text: 'Months (Northern Hemisphere)',
+        headerFormatter: shortHeader('Months'),
         sort: true,
         hidden: hemisphere === 'north' ? false : true
     },
     {
         dataField: 'south_month_label',
         text: 'Months (Southern Hemisphere)',
+        headerFormatter: shortHeader('Months'),
         sort: true,
         hidden: hemisphere === 'north' ? true : false
     }

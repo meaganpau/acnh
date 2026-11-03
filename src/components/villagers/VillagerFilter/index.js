@@ -9,9 +9,9 @@ const Container = styled.div`
     padding-left: 50px;
     padding-right: 50px;
 
+    /* Lets each filter sit in the parent's grid directly */
     @media screen and (max-width: 581px) {
-        padding-left: 0;
-        padding-right: 0;
+        display: contents;
     }
 `;
 
@@ -29,8 +29,19 @@ const Label = styled.label`
     }
 
     @media screen and (max-width: 581px) {
-        max-width: 400px;
+        min-width: 0;
         width: 100%;
+        margin: 0;
+
+        /* The first option already says what this filters */
+        p {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
     }
 `;
 

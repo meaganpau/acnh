@@ -8,6 +8,10 @@ const PageContainer = styled.div`
     @media screen and (max-width: 990px) {
         padding: 20px;
     }
+
+    @media screen and (max-width: 581px) {
+        padding: 10px 6px;
+    }
 `;
 
 export default PageContainer;

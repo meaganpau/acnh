@@ -1,5 +1,5 @@
 import { textFilter } from 'react-bootstrap-table2-filter';
-import { imageFormatter, arrayFormatter } from './formatters'
+import { imageFormatter, arrayFormatter, shortHeader } from './formatters'
 
 const bugColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMonthTableFilter, filterTime) => [
     {
@@ -37,6 +37,7 @@ const bugColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMonth
     {
         dataField: 'value',
         text: 'Sell Value',
+        headerFormatter: shortHeader('Price'),
         sort: true,
     },
     {
@@ -82,12 +83,14 @@ const bugColumns = (hemisphere, setNameTableFilter, setTimeTableFilter, setMonth
     {
         dataField: 'north_month_label',
         text: 'Months (Northern Hemisphere)',
+        headerFormatter: shortHeader('Months'),
         sort: true,
         hidden: hemisphere === 'north' ? false : true
     },
     {
         dataField: 'south_month_label',
         text: 'Months (Southern Hemisphere)',
+        headerFormatter: shortHeader('Months'),
         sort: true,
         hidden: hemisphere === 'north' ? true : false
     }

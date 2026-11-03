@@ -10,6 +10,11 @@ const Title = styled.h3`
     @media screen and (max-width: 990px) {
         margin-bottom: 20px;
     }
+
+    /* The active hemisphere tab already says this */
+    @media screen and (max-width: 581px) {
+        display: none;
+    }
 `;
 
 const Content = ({ handleCritterChange, hemisphere, critter, data }) => {

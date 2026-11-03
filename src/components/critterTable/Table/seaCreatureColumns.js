@@ -1,5 +1,5 @@
 import { textFilter } from 'react-bootstrap-table2-filter';
-import { imageFormatter, arrayFormatter } from './formatters';
+import { imageFormatter, arrayFormatter, shortHeader } from './formatters';
 
 const SeaCreatureColumns = (
     hemisphere,
@@ -33,6 +33,7 @@ const SeaCreatureColumns = (
     {
         dataField: 'value',
         text: 'Sell Value',
+        headerFormatter: shortHeader('Price'),
         sort: true,
     },
     {
@@ -78,12 +79,14 @@ const SeaCreatureColumns = (
     {
         dataField: 'north_month_label',
         text: 'Months (Northern Hemisphere)',
+        headerFormatter: shortHeader('Months'),
         sort: true,
         hidden: hemisphere === 'north' ? false : true,
     },
     {
         dataField: 'south_month_label',
         text: 'Months (Southern Hemisphere)',
+        headerFormatter: shortHeader('Months'),
         sort: true,
         hidden: hemisphere === 'north' ? true : false,
     },

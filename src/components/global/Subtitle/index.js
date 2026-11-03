@@ -13,6 +13,11 @@ const SubTitle = styled.h2`
     @media screen and (max-width: 990px) {
         font-size: 16px;
     }
+
+    @media screen and (max-width: 581px) {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
 `;
 
 export default SubTitle;

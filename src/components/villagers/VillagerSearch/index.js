@@ -5,7 +5,8 @@ import useDebounce from '../../../util/debounce';
 import { event } from '../../../util/gtag';
 
 const StyledSearchBar = styled(SearchBar)`
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
 `;
 

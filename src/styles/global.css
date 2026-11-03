@@ -6,6 +6,13 @@ body {
     background-size: 32px 32px;
 }
 
+/* Bootstrap sizes text in rem, so this shrinks body text, tables, tabs and buttons */
+@media screen and (max-width: 581px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 select.form-control {
     appearance: none;
     -webkit-appearance: none;
@@ -15,4 +22,12 @@ select.form-control {
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 12px 8px;
+}
+
+@media screen and (max-width: 581px) {
+    select.form-control {
+        padding-left: 0.5rem;
+        padding-right: 1.75rem;
+        background-position: right 0.5rem center;
+    }
 }

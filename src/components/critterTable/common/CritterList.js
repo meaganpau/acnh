@@ -40,6 +40,10 @@ const Container = styled.div`
             label {
                 display: none;
             }
+
+            .header-short {
+                display: none;
+            }
         }
 
         tr {
@@ -69,6 +73,32 @@ const Container = styled.div`
             }
         }
     }
+
+    @media screen and (max-width: 581px) {
+        padding-top: 15px;
+
+        table {
+            th {
+                padding-right: 30px;
+
+                .header-full {
+                    display: none;
+                }
+
+                .header-short {
+                    display: inline;
+                }
+            }
+
+            tr {
+                td:first-of-type,
+                th:first-of-type {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
 `;
 
 const TableContainer = styled.div`
@@ -80,13 +110,18 @@ const TableContainer = styled.div`
     @media screen and (max-width: 990px) {
         box-shadow: inset -30px 0 25px -20px rgba(0, 0, 0, 0.085);
         border-top-right-radius: 2px;
-        margin-top: 30px;
+        margin-top: 15px;
     }
 `;
 
 const Title = styled.h3`
     margin-bottom: 30px;
     text-transform: capitalize;
+
+    /* The active critter tab already says this */
+    @media screen and (max-width: 581px) {
+        display: none;
+    }
 `;
 
 const Filters = styled.div`
@@ -113,6 +148,12 @@ const Filters = styled.div`
             margin-left: 0;
         }
     }
+
+    @media screen and (max-width: 581px) {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 15px;
+    }
 `;
 
 const Buttons = styled.div`
@@ -120,6 +161,11 @@ const Buttons = styled.div`
     padding-left: 30px;
     padding-right: 30px;
     justify-content: center;
+
+    @media screen and (max-width: 581px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 `;
 
 const AvailableNowButton = styled.button`

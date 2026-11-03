@@ -9,10 +9,29 @@ const Card = styled.div`
     flex-basis: 300px;
     margin: 10px auto;
     background: #fff;
+
+    /* Image on the left, name and details on the right */
+    @media screen and (max-width: 581px) {
+        position: relative;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        column-gap: 15px;
+        align-items: center;
+        flex-basis: 100%;
+        margin: 5px 0;
+        padding: 15px;
+    }
 `;
 
 const Img = styled.img`
     max-height: 120px;
+
+    @media screen and (max-width: 581px) {
+        grid-row: 1 / span 2;
+        justify-self: center;
+        max-width: 80px;
+        max-height: 80px;
+    }
 `;
 
 const Details = styled.div`
@@ -27,15 +46,42 @@ const Details = styled.div`
         font-size: 14px;
         margin-right: 5px;
     }
+
+    @media screen and (max-width: 581px) {
+        grid-column: 2;
+        font-size: 14px;
+
+        p {
+            margin-bottom: 2px;
+        }
+
+        span {
+            font-size: 13px;
+        }
+    }
 `;
 
 const Profile = styled.div`
     text-align: center;
+
+    /* Lets the image and name sit in the card's grid directly */
+    @media screen and (max-width: 581px) {
+        display: contents;
+    }
 `;
 
 const Name = styled.h4`
     margin-top: 15px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 581px) {
+        grid-column: 2;
+        align-self: end;
+        margin: 0 0 5px;
+        padding-right: 40px;
+        font-size: 20px;
+        text-align: left;
+    }
 `;
 
 const ButtonContainer = styled.div`
@@ -43,7 +89,13 @@ const ButtonContainer = styled.div`
     justify-content: flex-end;
     margin-top: -40px;
     margin-right: -40px;
-}
+
+    @media screen and (max-width: 581px) {
+        position: absolute;
+        top: -25px;
+        right: -5px;
+        margin: 0;
+    }
 `;
 
 const VillagerCard = ({
