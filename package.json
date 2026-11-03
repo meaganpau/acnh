@@ -6,6 +6,7 @@
         "node": ">=20.19.0"
     },
     "dependencies": {
+        "@vercel/analytics": "^2.0.1",
         "dotenv": "^8.2.0",
         "express": "^5.2.1",
         "mongoose": "^9.10.1"
