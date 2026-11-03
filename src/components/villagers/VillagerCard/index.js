@@ -64,7 +64,7 @@ const Details = styled.div`
 const Profile = styled.div`
     text-align: center;
 
-    /* Lets the image and name sit in the card's grid directly */
+    /* Puts the image and name directly in the card's grid */
     @media screen and (max-width: 581px) {
         display: contents;
     }
@@ -89,6 +89,15 @@ const ButtonContainer = styled.div`
     justify-content: flex-end;
     margin-top: -40px;
     margin-right: -40px;
+
+    /* Lines the red heart up with the grey one (the library is a few px off) */
+    ${(props) =>
+        props.isFav &&
+        `
+        & > div {
+            background-position: -2800px 0;
+        }
+    `}
 
     @media screen and (max-width: 581px) {
         position: absolute;
@@ -127,7 +136,7 @@ const VillagerCard = ({
     return (
         <Card>
             <Profile>
-                <ButtonContainer>
+                <ButtonContainer isFav={isFav}>
                     <Heart
                         isClick={isFav}
                         onClick={(e) =>

@@ -9,7 +9,7 @@ const Container = styled.div`
     padding-left: 50px;
     padding-right: 50px;
 
-    /* Lets each filter sit in the parent's grid directly */
+    /* Puts each filter directly in the parent's grid */
     @media screen and (max-width: 581px) {
         display: contents;
     }
@@ -33,7 +33,7 @@ const Label = styled.label`
         width: 100%;
         margin: 0;
 
-        /* The first option already says what this filters */
+        /* Hidden visually; the first option labels it */
         p {
             position: absolute;
             width: 1px;
@@ -46,10 +46,7 @@ const Label = styled.label`
 `;
 
 const VillagerFilter = ({ handleFilter, currentFilter }) => {
-    // handleFilter is passed down from the parent without useCallback, so
-    // its reference changes every parent render. Adding it here would
-    // re-fire this effect on every parent render, not just when
-    // currentFilter changes.
+    // Only re-run when the filter changes
     useEffect(() => {
         handleFilter(currentFilter);
         // eslint-disable-next-line react-hooks/exhaustive-deps

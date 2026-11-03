@@ -5,6 +5,7 @@ import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import filterFactory from 'react-bootstrap-table2-filter';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import SearchBar from '../../global/SearchBar/';
+import Loading from '../../global/Loading';
 import useDebounce from '../../../util/debounce';
 import months from '../../../util/months';
 import monthOptions from '../../../util/monthOptions';
@@ -224,7 +225,13 @@ const critterTitleMap = {
     seaCreature: 'Sea Creatures',
 };
 
-const CritterList = ({ data, critter, hemisphere }) => {
+const StatusMessage = styled.div`
+    padding: 30px 20px;
+    text-align: center;
+    color: #777;
+`;
+
+const CritterList = ({ data, critter, hemisphere, status }) => {
     const [inputVal, setInputVal] = useState('');
     const [month, setMonthFilter] = useState('');
     const [time, setTimeFilter] = useState('');
@@ -241,10 +248,7 @@ const CritterList = ({ data, critter, hemisphere }) => {
         setMonthFilter('');
     };
 
-    // handleReset is redefined every render and reads the current
-    // nameTableFilter/monthTableFilter/timeTableFilter state, so adding it
-    // to the dependency array would re-run this effect (and its setState
-    // calls) on every render, not just when hemisphere changes.
+    // Clear filters only when the hemisphere changes
     useEffect(() => {
         handleReset();
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -415,9 +419,23 @@ const CritterList = ({ data, critter, hemisphere }) => {
                             {...props.baseProps}
                             defaultSorted={defaultSorted}
                             filter={filterFactory()}
-                            noDataIndication="No critters found :("
+                            noDataIndication={
+                                status === 'done'
+                                    ? 'No critters found :('
+                                    : undefined
+                            }
                         />
                     </TableContainer>
+                    {/* Outside the scrolling table so it stays centered */}
+                    {status === 'loading' && (
+                        <Loading>Loading critters...</Loading>
+                    )}
+                    {status === 'error' && (
+                        <StatusMessage>
+                            Couldn't load critters. Please refresh and try
+                            again.
+                        </StatusMessage>
+                    )}
                 </Container>
             )}
         </ToolkitProvider>

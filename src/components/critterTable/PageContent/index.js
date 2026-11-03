@@ -17,7 +17,7 @@ const Title = styled.h3`
     }
 `;
 
-const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
+const Content = ({ handleCritterChange, hemisphere, critter, data, status }) => {
     const isActive = (tabName) => (tabName === critter ? 'active' : '');
     return (
         <ContentContainer tabs={true}>
@@ -53,6 +53,7 @@ const Content = ({ handleCritterChange, hemisphere, critter, data }) => {
             </Tabs>
             <CritterList
                 data={data}
+                status={status}
                 critter={critter}
                 hemisphere={hemisphere}
             />

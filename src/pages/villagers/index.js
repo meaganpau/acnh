@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styled from '@emotion/styled';
 import VillagerList from '../../components/villagers/VillagerList';
 import PageContainer from '../../components/global/PageContainer';
@@ -7,6 +7,7 @@ import SubTitle from '../../components/global/Subtitle';
 import Tabs from '../../components/global/Tabs';
 import VillagerContext from '../../context/villagers';
 import FavouritesList from '../../components/villagers/FavouritesList';
+import { fetchCached, getCached } from '../../util/apiCache';
 
 const VillagerListTab = styled.div`
     display: ${(props) => {
@@ -18,40 +19,51 @@ const FavouritesListTab = styled.div`
     display: ${(props) => (props.show ? 'block' : 'none')};
 `;
 
+const VILLAGERS_URL = '/api/villagers';
+
+const loadFavourites = () =>
+    JSON.parse(localStorage.getItem('favoriteVillagers')) || [];
+
 const Villagers = (className) => {
-    const [villagers, setVillagers] = useState([]);
-    const [villagersObj, setVillagersObj] = useState({});
-    const [loadingVillagers, setLoadingVillagers] = useState(true);
+    // Start with cached data if we have it
+    const [data, setData] = useState(() => getCached(VILLAGERS_URL) || null);
+    const [villagersError, setVillagersError] = useState(false);
     const [currentTab, setCurrentTab] = useState('villagers');
-    const [favouriteVillagers, setFavouriteVillagers] = useState([]);
+    // Favourites need villager data, so load them together
+    const [favouriteVillagers, setFavouriteVillagers] = useState(() =>
+        getCached(VILLAGERS_URL) ? loadFavourites() : []
+    );
+
+    const villagers = useMemo(
+        () =>
+            data ? [...data].sort((a, b) => a.name.localeCompare(b.name)) : [],
+        [data]
+    );
+    const villagersObj = useMemo(
+        () => Object.fromEntries(villagers.map((v) => [v.name, v])),
+        [villagers]
+    );
+    const loadingVillagers = !data && !villagersError;
 
     useEffect(() => {
-        fetch('/api/villagers')
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    throw new Error('Something went wrong...');
-                }
-            })
-            .then((data) => {
-                setVillagers(data.sort((a, b) => a.name.localeCompare(b.name)));
-                const obj = {};
-                data.forEach((villager) => {
-                    obj[villager.name] = villager;
-                });
-                setVillagersObj(obj);
-                setLoadingVillagers(false);
-                const savedFav = JSON.parse(
-                    localStorage.getItem('favoriteVillagers')
-                );
-                if (savedFav) {
-                    setFavouriteVillagers(savedFav);
-                }
+        if (getCached(VILLAGERS_URL)) {
+            return;
+        }
+        // Ignore results that arrive after leaving the page
+        let active = true;
+        fetchCached(VILLAGERS_URL)
+            .then((json) => {
+                if (!active) return;
+                setData(json);
+                setFavouriteVillagers(loadFavourites());
             })
             .catch((err) => {
                 console.log(err);
+                if (active) setVillagersError(true);
             });
+        return () => {
+            active = false;
+        };
     }, []);
 
     const handleTabChange = (e, tab) => {
@@ -68,7 +80,7 @@ const Villagers = (className) => {
 
     const handleRemoveVillager = (villagerName) => {
         const villagers = [...favouriteVillagers];
-        villagers.splice(villagers.indexOf(villagerName), 1); // will return ['B'] and t is now equal to ['A', 'C', 'B']
+        villagers.splice(villagers.indexOf(villagerName), 1);
         setFavouriteVillagers(villagers);
         localStorage.setItem('favoriteVillagers', JSON.stringify(villagers));
     };
@@ -108,6 +120,7 @@ const Villagers = (className) => {
                         villagers={villagers}
                         favouriteVillagers={favouriteVillagers}
                         loadingVillagers={loadingVillagers}
+                        villagersError={villagersError}
                         handleAddVillager={handleAddVillager}
                         handleRemoveVillager={handleRemoveVillager}
                     />

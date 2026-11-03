@@ -6,9 +6,7 @@ export const imageFormatter = (cell, row) => <CritterImage src={cell} alt={row.n
 export const arrayFormatter = (cell, row) => cell.join(', ')
 
 
-// Swaps the header text for a shorter label on mobile. A headerFormatter
-// replaces the whole cell, so the sort caret and filter have to be rendered
-// here too.
+// Shorter header text on mobile. Keeps the sort caret and filter.
 export const shortHeader = (shortText) => (column, colIndex, { sortElement, filterElement }) => (
     <>
         <span className="header-full">{column.text}</span>

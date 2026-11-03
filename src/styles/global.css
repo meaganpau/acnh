@@ -6,7 +6,7 @@ body {
     background-size: 32px 32px;
 }
 
-/* Bootstrap sizes text in rem, so this shrinks body text, tables, tabs and buttons */
+/* Shrinks all Bootstrap text on mobile (it's sized in rem) */
 @media screen and (max-width: 581px) {
     html {
         font-size: 14px;

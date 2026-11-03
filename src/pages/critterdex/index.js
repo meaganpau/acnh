@@ -5,6 +5,7 @@ import PageContainer from '../../components/global/PageContainer';
 import Title, { Logo } from '../../components/global/Title';
 import Subtitle from '../../components/global/Subtitle';
 import { event } from '../../util/gtag';
+import { fetchCached, getCached } from '../../util/apiCache';
 import styled from '@emotion/styled';
 
 const Link = styled.a`
@@ -22,58 +23,54 @@ const Page = styled(PageContainer)`
     max-width: 1200px;
 `;
 
+const critterUrls = {
+    fish: '/api/fish',
+    bug: '/api/bugs',
+    seaCreature: '/api/sea-creatures',
+};
+
+// Returns { fish, bug, seaCreature } with fn applied to each URL
+const mapTypes = (fn) =>
+    Object.fromEntries(
+        Object.entries(critterUrls).map(([type, url]) => [type, fn(url)])
+    );
+
 const CritterDex = () => {
-    const [fish, setFish] = useState([]);
-    const [bugs, setBugs] = useState([]);
-    const [seaCreatures, setSeaCreatures] = useState([]);
+    // Start with cached data if we have it
+    const [data, setData] = useState(() =>
+        mapTypes((url) => getCached(url) || [])
+    );
+    // Each type loads separately
+    const [status, setStatus] = useState(() =>
+        mapTypes((url) => (getCached(url) ? 'done' : 'loading'))
+    );
     const [hemisphere, setHemisphere] = useState('north');
     const [critter, setCritter] = useState('fish');
 
     useEffect(() => {
-        fetch('/api/fish')
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    throw new Error('Something went wrong...');
-                }
-            })
-            .then((data) => {
-                setFish(data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        // Ignore results that arrive after leaving the page
+        let active = true;
 
-        fetch('/api/bugs')
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    throw new Error('Something went wrong...');
-                }
-            })
-            .then((data) => {
-                setBugs(data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        Object.entries(critterUrls).forEach(([type, url]) => {
+            if (getCached(url)) {
+                return;
+            }
+            fetchCached(url)
+                .then((json) => {
+                    if (!active) return;
+                    setData((prev) => ({ ...prev, [type]: json }));
+                    setStatus((prev) => ({ ...prev, [type]: 'done' }));
+                })
+                .catch((err) => {
+                    console.log(err);
+                    if (!active) return;
+                    setStatus((prev) => ({ ...prev, [type]: 'error' }));
+                });
+        });
 
-        fetch('/api/sea-creatures')
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    throw new Error('Something went wrong...');
-                }
-            })
-            .then((data) => {
-                setSeaCreatures(data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        return () => {
+            active = false;
+        };
     }, []);
 
     const handleHemisphereChange = (e, hemisphere) => {
@@ -94,12 +91,6 @@ const CritterDex = () => {
             category: 'Critter',
             label: critter,
         });
-    };
-
-    const dataMap = {
-        bug: bugs,
-        fish: fish,
-        seaCreature: seaCreatures,
     };
 
     const activeTab = (tabHemisphere) =>
@@ -136,7 +127,8 @@ const CritterDex = () => {
                 critter={critter}
                 handleCritterChange={handleCritterChange}
                 hemisphere={hemisphere}
-                data={dataMap[critter]}
+                data={data[critter]}
+                status={status[critter]}
             />
             <Link
                 className="App-link"

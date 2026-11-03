@@ -4,6 +4,7 @@ import VillagerCard from '../VillagerCard';
 import VillagerFilter from '../VillagerFilter';
 import VillagerSearch from '../VillagerSearch';
 import ContentContainer from '../../global/ContentContainer';
+import Loading from '../../global/Loading';
 
 const List = styled.div`
     display: flex;
@@ -15,7 +16,7 @@ const FilterContainer = styled.div`
     max-width: 800px;
     margin: 0 auto 20px;
 
-    /* Search on its own row, then the three filters and the button in pairs */
+    /* Search on its own row, the rest in pairs */
     @media screen and (max-width: 581px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -48,7 +49,7 @@ const Label = styled.label`
         grid-column: 1 / -1;
         margin: 0;
 
-        /* The placeholder already says what this is */
+        /* Hidden visually; the placeholder labels it */
         p {
             position: absolute;
             width: 1px;
@@ -70,11 +71,13 @@ const defaultFilter = {
 const VillagerList = ({
     villagers,
     loadingVillagers,
+    villagersError,
     handleAddVillager,
     handleRemoveVillager,
     favouriteVillagers,
 }) => {
-    const [villagersList, setVillagersList] = useState([]);
+    // Start with props so cached villagers show on the first render
+    const [villagersList, setVillagersList] = useState(villagers);
     const [filterObj, setFilterObj] = useState(defaultFilter);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -82,12 +85,7 @@ const VillagerList = ({
         setVillagersList(villagers);
     }, [villagers]);
 
-    // filterObj is mutated in place (not replaced via setFilterObj), so its
-    // reference never changes and adding it here wouldn't re-run this
-    // effect any differently. handleFilter is passed down from the parent
-    // without useCallback, so its reference changes every parent render —
-    // adding it would re-fire this effect on every parent render, not just
-    // when searchTerm changes.
+    // Only re-run when the search term changes
     useEffect(() => {
         filterObj.name = searchTerm;
         handleFilter(filterObj);
@@ -157,7 +155,9 @@ const VillagerList = ({
                     ))}
                 </List>
             ) : loadingVillagers ? (
-                'Loading...'
+                <Loading>Loading villagers...</Loading>
+            ) : villagersError ? (
+                "Couldn't load villagers. Please refresh and try again."
             ) : (
                 'No villagers found :('
             )}
